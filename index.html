@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTU0IiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDE1NCAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTQiIGhlaWdodD0iMTcwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNjEuNzA3MSAyNC4yOTI5QzYxLjMxNjYgMjMuOTAyNCA2MC42ODM0IDIzLjkwMjQgNjAuMjkyOSAyNC4yOTI5TDUzLjkyODkgMzAuNjU2OUM1My41Mzg0IDMxLjA0NzQgNTMuNTM4NCAzMS42ODA1IDUzLjkyODkgMzIuMDcxMUM1NC4zMTk1IDMyLjQ2MTYgNTQuOTUyNiAzMi40NjE2IDU1LjM0MzEgMzIuMDcxMUw2MSAyNi40MTQyTDY2LjY1NjkgMzIuMDcxMUM2Ny4wNDc0IDMyLjQ2MTYgNjcuNjgwNSAzMi40NjE2IDY4LjA3MTEgMzIuMDcxMUM2OC40NjE2IDMxLjY4MDUgNjguNDYxNiAzMS4wNDc0IDY4LjA3MTEgMzAuNjU2OUw2MS43MDcxIDI0LjI5MjlaTTYxIDEwM0g2Mkw2MiAyNUg2MUg2MEw2MCAxMDNINjFaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMTM5LjcwNyAxMDMuNzA3QzE0MC4wOTggMTAzLjMxNyAxNDAuMDk4IDEwMi42ODMgMTM5LjcwNyAxMDIuMjkzTDEzMy4zNDMgOTUuOTI4OUMxMzIuOTUzIDk1LjUzODQgMTMyLjMxOSA5NS41Mzg0IDEzMS45MjkgOTUuOTI4OUMxMzEuNTM4IDk2LjMxOTUgMTMxLjUzOCA5Ni45NTI2IDEzMS45MjkgOTcuMzQzMUwxMzcuNTg2IDEwM0wxMzEuOTI5IDEwOC42NTdDMTMxLjUzOCAxMDkuMDQ3IDEzMS41MzggMTA5LjY4MSAxMzEuOTI5IDExMC4wNzFDMTMyLjMxOSAxMTAuNDYyIDEzMi45NTMgMTEwLjQ2MiAxMzMuMzQzIDExMC4wNzFMMTM5LjcwNyAxMDMuNzA3Wk02MSAxMDNWMTA0SDEzOVYxMDNWMTAySDYxVjEwM1oiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0xNS4wNjY0IDE0OEMxNS4wNjY0IDE0OC41NTIgMTUuNTE0MSAxNDkgMTYuMDY2NCAxNDlMMjUuMDY2NCAxNDlDMjUuNjE4NyAxNDkgMjYuMDY2NCAxNDguNTUyIDI2LjA2NjQgMTQ4QzI2LjA2NjQgMTQ3LjQ0OCAyNS42MTg3IDE0NyAyNS4wNjY0IDE0N0wxNy4wNjY0IDE0N0wxNy4wNjY0IDEzOUMxNy4wNjY0IDEzOC40NDggMTYuNjE4NyAxMzggMTYuMDY2NCAxMzhDMTUuNTE0MSAxMzggMTUuMDY2NCAxMzguNDQ4IDE1LjA2NjQgMTM5TDE1LjA2NjQgMTQ4Wk02MS4wNjY0IDEwM0w2MC4zNTkzIDEwMi4yOTNMMTUuMzU5MyAxNDcuMjkzTDE2LjA2NjQgMTQ4TDE2Ljc3MzUgMTQ4LjcwN0w2MS43NzM1IDEwMy43MDdMNjEuMDY2NCAxMDNaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMTQyLjE2IDExMEwxNDQuNzIgMTAyLjcyTDE0Mi4yIDk2SDE0Ny4wNkwxNDcuNTggOTguMDZDMTQ3Ljg4IDk5LjI4IDE0Ny45NiA5OS45IDE0OC4wNCAxMDAuNTZDMTQ4LjEyIDk5LjkgMTQ4LjIyIDk5LjI2IDE0OC41MiA5OC4wNkwxNDkuMDQgOTZIMTUzLjY2TDE1MS4xMiAxMDIuNjRMMTUzLjg0IDExMEgxNDguOUwxNDguNCAxMDcuOTRDMTQ4LjEyIDEwNi43NiAxNDguMDIgMTA2LjEgMTQ3LjkyIDEwNS4zOEMxNDcuOCAxMDYuMTIgMTQ3LjY4IDEwNi44NCAxNDcuNCAxMDcuOTRMMTQ2Ljg4IDExMEgxNDIuMTZaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNNTguOTIgMjBWMTUuOThMNTUuMDYgNkg1OS44TDYwLjQyIDguNUM2MC43NiA5LjkgNjAuOSAxMC42MiA2MS4wOCAxMS43MkM2MS4yNiAxMC42IDYxLjQyIDkuOSA2MS43NiA4LjVMNjIuMzggNkg2Ni45NEw2My4xNiAxNS45NFYyMEg1OC45MloiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0wLjYgMTYzVjE1OS4yNEw0Ljk4IDE1My43MkM1LjQgMTUzLjE4IDUuNyAxNTIuOSA2LjA4IDE1Mi41NEgxVjE0OUgxMVYxNTIuNUw2LjYgMTU4LjE0QzYuMTQgMTU4Ljc0IDUuODQgMTU5LjA0IDUuNCAxNTkuNDRIMTEuNFYxNjNIMC42WiIgZmlsbD0iYmxhY2siLz4KPGNpcmNsZSBjeD0iNjEiIGN5PSIxMDMiIHI9IjQiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTU0IiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDE1NCAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTQiIGhlaWdodD0iMTcwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNjEuNzA3MSAyNC4yOTI5QzYxLjMxNjYgMjMuOTAyNCA2MC42ODM0IDIzLjkwMjQgNjAuMjkyOSAyNC4yOTI5TDUzLjkyODkgMzAuNjU2OUM1My41Mzg0IDMxLjA0NzQgNTMuNTM4NCAzMS42ODA1IDUzLjkyODkgMzIuMDcxMUM1NC4zMTk1IDMyLjQ2MTYgNTQuOTUyNiAzMi40NjE2IDU1LjM0MzEgMzIuMDcxMUw2MSAyNi40MTQyTDY2LjY1NjkgMzIuMDcxMUM2Ny4wNDc0IDMyLjQ2MTYgNjcuNjgwNSAzMi40NjE2IDY4LjA3MTEgMzIuMDcxMUM2OC40NjE2IDMxLjY4MDUgNjguNDYxNiAzMS4wNDc0IDY4LjA3MTEgMzAuNjU2OUw2MS43MDcxIDI0LjI5MjlaTTYxIDEwM0g2Mkw2MiAyNUg2MUg2MEw2MCAxMDNINjFaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMTM5LjcwNyAxMDMuNzA3QzE0MC4wOTggMTAzLjMxNyAxNDAuMDk4IDEwMi42ODMgMTM5LjcwNyAxMDIuMjkzTDEzMy4zNDMgOTUuOTI4OUMxMzIuOTUzIDk1LjUzODQgMTMyLjMxOSA5NS41Mzg0IDEzMS45MjkgOTUuOTI4OUMxMzEuNTM4IDk2LjMxOTUgMTMxLjUzOCA5Ni45NTI2IDEzMS45MjkgOTcuMzQzMUwxMzcuNTg2IDEwM0wxMzEuOTI5IDEwOC42NTdDMTMxLjUzOCAxMDkuMDQ3IDEzMS41MzggMTA5LjY4MSAxMzEuOTI5IDExMC4wNzFDMTMyLjMxOSAxMTAuNDYyIDEzMi45NTMgMTEwLjQ2MiAxMzMuMzQzIDExMC4wNzFMMTM5LjcwNyAxMDMuNzA3Wk02MSAxMDNWMTA0SDEzOVYxMDNWMTAySDYxVjEwM1oiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0xNS4wNjY0IDE0OEMxNS4wNjY0IDE0OC41NTIgMTUuNTE0MSAxNDkgMTYuMDY2NCAxNDlMMjUuMDY2NCAxNDlDMjUuNjE4NyAxNDkgMjYuMDY2NCAxNDguNTUyIDI2LjA2NjQgMTQ4QzI2LjA2NjQgMTQ3LjQ0OCAyNS42MTg3IDE0NyAyNS4wNjY0IDE0N0wxNy4wNjY0IDE0N0wxNy4wNjY0IDEzOUMxNy4wNjY0IDEzOC40NDggMTYuNjE4NyAxMzggMTYuMDY2NCAxMzhDMTUuNTE0MSAxMzggMTUuMDY2NCAxMzguNDQ4IDE1LjA2NjQgMTM5TDE1LjA2NjQgMTQ4Wk02MS4wNjY0IDEwM0w2MC4zNTkzIDEwMi4yOTNMMTUuMzU5MyAxNDcuMjkzTDE2LjA2NjQgMTQ4TDE2Ljc3MzUgMTQ4LjcwN0w2MS43NzM1IDEwMy43MDdMNjEuMDY2NCAxMDNaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMTQyLjE2IDExMEwxNDQuNzIgMTAyLjcyTDE0Mi4yIDk2SDE0Ny4wNkwxNDcuNTggOTguMDZDMTQ3Ljg4IDk5LjI4IDE0Ny45NiA5OS45IDE0OC4wNCAxMDAuNTZDMTQ4LjEyIDk5LjkgMTQ4LjIyIDk5LjI2IDE0OC41MiA5OC4wNkwxNDkuMDQgOTZIMTUzLjY2TDE1MS4xMiAxMDIuNjRMMTUzLjg0IDExMEgxNDguOUwxNDguNCAxMDcuOTRDMTQ4LjEyIDEwNi43NiAxNDguMDIgMTA2LjEgMTQ3LjkyIDEwNS4zOEMxNDcuOCAxMDYuMTIgMTQ3LjY4IDEwNi44NCAxNDcuNCAxMDcuOTRMMTQ2Ljg4IDExMEgxNDIuMTZaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNNTguOTIgMjBWMTUuOThMNTUuMDYgNkg1OS44TDYwLjQyIDguNUM2MC43NiA5LjkgNjAuOSAxMC42MiA2MS4wOCAxMS43MkM2MS4yNiAxMC42IDYxLjQyIDkuOSA2MS43NiA4LjVMNjIuMzggNkg2Ni45NEw2My4xNiAxNS45NFYyMEg1OC45MloiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik0wLjYgMTYzVjE1OS4yNEw0Ljk4IDE1My43MkM1LjQgMTUzLjE4IDUuNyAxNTIuOSA2LjA4IDE1Mi41NEgxVjE0OUgxMVYxNTIuNUw2LjYgMTU4LjE0QzYuMTQgMTU4Ljc0IDUuODQgMTU5LjA0IDUuNCAxNTkuNDRIMTEuNFYxNjNIMC42WiIgZmlsbD0iYmxhY2siLz4KPGNpcmNsZSBjeD0iNjEiIGN5PSIxMDMiIHI9IjQiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=">
+<title>Tri-Axis of Rules — Infinite Canvas</title>
+<style>
+  /* ── FONTS ── */
+  @font-face {
+    font-family: 'MonoEN';
+    src: url('font/GT-Pressura-LCGV-Standard-Medium.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'GothicKO';
+    src: url('font/YMGMuncheGothic-Medium.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NavBold';
+    src: url('font/GT-Pressura-LCGV-Standard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TitleBlack';
+    src: url('font/GT-Pressura-Standard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'AsSerif';
+    src: url('font/as-serif.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SDGothicKO';
+    src: url('font/SDGothicNeoc-fBd.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+AC00-D7A3, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #dedede;
+    --card-w: 140px;
+    --card-h: 105px;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'MonoEN', monospace;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SITE TITLE — large top-anchored type ── */
+  #site-title {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1;
+    padding: 0 15px;
+    font-family: 'TitleBlack', sans-serif;
+    font-size: calc(90vh / 2.46);
+    font-weight: 900;
+    color: #dedede;
+    line-height: 0.8;
+    letter-spacing: -0.0em;
+    text-transform: uppercase;
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+  }
+
+  /* ── VIEWPORT ── */
+  #viewport {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    cursor: grab;
+    background: transparent;
+  }
+  #viewport:active { cursor: crosshair; }
+
+  /* ── CANVAS ── */
+  #canvas {
+    position: absolute;
+    width: 10000px;
+    height: 8000px;
+    top: 0; left: 0;
+    will-change: transform;
+    transform-origin: 0 0;
+    z-index: 2;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    position: absolute;
+    left: 0; top: 0;
+    width: var(--card-w);
+    height: var(--card-h);
+    background: none;
+    border: none;
+    overflow: visible;   /* allow .card-num to sit above the box */
+    cursor: pointer;
+    will-change: transform;
+  }
+
+  /* Number badge — outside the image box, above it */
+  .card-num {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 5px;
+    font-family: 'MonoEN', monospace;
+    font-size: 11px;
+    color: var(--fg);
+    white-space: nowrap;
+  }
+
+  /* Image box — the actual black rectangle */
+  .card-body {
+    position: absolute;
+    inset: 0;
+    background: #111;
+    overflow: hidden;
+    transition: opacity 0.2s;
+  }
+  .card:hover .card-body { opacity: 0.75; }
+
+  .card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .card-img.loaded { opacity: 1; }
+
+  .card-placeholder {
+    position: absolute;
+    inset: 0;
+    background: #111;
+  }
+
+  /* ── HUD — bottom-left meta ── */
+  #hud {
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: 10000;
+    pointer-events: none;
+    padding: 0 0 28px 24px;
+  }
+
+  #hud-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hud-line {
+    font-size: 11px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  #hud-mode {
+    font-size: 11px;
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  /* ── AXIS CONTROL ── */
+  #axis-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+  }
+
+  #btn-float, #btn-split {
+    font-size: 15px;
+    color: #000;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 0;
+    letter-spacing: 0.3px;
+    transition: opacity 0.15s;
+  }
+  #btn-float:hover, #btn-float.active { opacity: 0.5; }
+  #btn-split:hover, #btn-split.active { opacity: 0.5; }
+
+  .axis-label {
+    cursor: pointer;
+    font-family: 'MonoEN', monospace;
+    font-size: 18px;
+    fill: #000;
+    transition: opacity 0.15s;
+    user-select: none;
+  }
+  .axis-label:hover { opacity: 0.5; }
+  .axis-label.active { fill: #000; font-weight: 700; }
+
+  /* ── MODAL — centered popup ── */
+  #modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.96);
+    padding: 48px 32px;
+  }
+  #modal-overlay.active { display: flex; }
+
+  #modal-close {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+    font-family: 'MonoEN', monospace;
+    font-size: 13px;
+    color: #dedede;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    letter-spacing: 0.3px;
+    transition: opacity 0.15s;
+    z-index: 1;
+  }
+  #modal-close:hover { opacity: 0.4; }
+
+  #lightbox-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: min(800px, 90vw);
+    width: 100%;
+  }
+
+  #lightbox-img {
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    display: block;
+  }
+
+  #lightbox-placeholder {
+    width: 100%;
+    max-width: min(800px, 90vw);
+    aspect-ratio: 4/3;
+    max-height: 65vh;
+    background: #222;
+  }
+
+  #lightbox-meta {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .modal-card-id,
+  .modal-title,
+  .modal-title-en {
+    font-size: 20px;
+    color: #dedede;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .modal-card-id {
+    font-family: 'MonoEN', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .modal-title {
+    font-family: 'GothicKO', sans-serif;
+    letter-spacing: -0.03em;
+    word-break: keep-all;
+    transform: scaleX(0.97);
+    transform-origin: left center;
+  }
+
+  .modal-title-en {
+    font-family: 'MonoEN', monospace;
+    letter-spacing: 0.2px;
+    padding-left: 1ch;
+  }
+
+  #modal-box::-webkit-scrollbar { width: 4px; }
+  #modal-box::-webkit-scrollbar-track { background: transparent; }
+  #modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); }
+
+  /* ── TOP-RIGHT BUTTONS (syndicat-style) ── */
+  #top-right-btns {
+    position: fixed;
+    top: 0; right: 0;
+    width: 320px;
+    z-index: 15000;
+    padding: 0.5em 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #dict-btn, #gallery-btn, #about-btn {
+    cursor: pointer;
+    background: none; border: none;
+    font-family: 'NavBold', 'MonoEN', monospace;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: 0;
+    padding: 0;
+    line-height: 1.25;
+    text-align: right;
+    transition: opacity 0.15s;
+  }
+  #about-btn { margin-top: 1.25em; }
+  #dict-btn:hover, #gallery-btn:hover, #about-btn:hover { opacity: 0.45; }
+
+
+  /* ── LOGO (fixed left) ── */
+  #site-logo {
+    position: fixed; top: 18px; left: 24px; z-index: 15000;
+    pointer-events: none;
+  }
+  #site-logo img { height: 40px; width: auto; display: block; }
+
+  /* ── ABOUT PANEL — slides in from right ── */
+  #about-overlay {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 700px;
+    z-index: 30000;
+    background: #dedede;
+    transform: translateX(100%);
+    transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-overlay.open { transform: translateX(0); pointer-events: auto; }
+
+  #about-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    flex-shrink: 0;
+  }
+  #about-close {
+    background: none; border: none; cursor: pointer;
+    font-family: 'MonoEN', monospace; font-size: 13px;
+    color: var(--fg); letter-spacing: 0.3px; padding: 0;
+    transition: opacity 0.15s;
+  }
+  #about-close:hover { opacity: 0.4; }
+  #about-lang-toggle {
+    background: none; border: none; cursor: pointer;
+    font-family: 'MonoEN', monospace; font-size: 13px;
+    color: var(--fg); letter-spacing: 0.3px; padding: 0;
+    transition: opacity 0.15s;
+  }
+  #about-lang-toggle:hover, #about-lang-toggle.active { opacity: 0.45; }
+
+  #about-body {
+    overflow-y: auto;
+    padding: 8px 32px 80px;
+    flex: 1;
+    scrollbar-width: none;
+  }
+  #about-body::-webkit-scrollbar { width: 0; }
+
+  .about-panel-section { margin-bottom: 40px; }
+  .about-panel-title {
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 17px;
+    letter-spacing: 0; color: var(--fg); margin-bottom: 12px;
+    word-break: keep-all;
+  }
+  .about-panel-text {
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px;
+    line-height: 1.75; color: var(--fg); margin-bottom: 10px;
+    letter-spacing: 0;
+    word-break: keep-all;
+  }
+  .about-panel-text-en {
+    font-family: 'MonoEN', monospace; font-size: 17px;
+    line-height: 1.55; color: var(--fg); margin-bottom: 10px;
+  }
+  .about-panel-axis { margin-bottom: 18px; }
+  .about-panel-axis-name {
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 17px;
+    letter-spacing: 0;
+    color: var(--fg); margin-bottom: 6px;
+  }
+  #about-ko .about-panel-axis-name {
+    font-size: 16px;
+  }
+  .about-panel-item {
+    display: grid; grid-template-columns: 44px 1fr;
+    gap: 0 8px; padding: 3px 0; align-items: start;
+  }
+  .about-panel-val {
+    font-family: 'MonoEN', monospace; font-size: 17px; color: var(--fg);
+    line-height: 1.55; padding-top: 0;
+  }
+  #about-ko .about-panel-val {
+    font-size: 15px; line-height: 1.65;
+  }
+  #about-en .about-panel-val {
+    font-size: 14px; line-height: 1.55;
+  }
+  .about-panel-desc-ko {
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px; line-height: 1.65;
+    letter-spacing: 0; word-break: keep-all;
+  }
+  .about-panel-desc-en {
+    font-family: 'MonoEN', monospace; font-size: 17px; line-height: 1.55;
+  }
+  .about-panel-side-item {
+    display: grid; grid-template-columns: 32px 1fr;
+    gap: 0 8px; padding: 3px 0; align-items: start;
+  }
+  .about-panel-side-key {
+    font-family: 'MonoEN', monospace; font-size: 11px; color: var(--muted);
+    padding-top: 2px;
+  }
+  #about-en { display: none; }
+
+  /* ── DICT OVERLAY — slides in from right ── */
+  #dict-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 30000;
+    background: #dedede;
+    transform: translateX(100%);
+    transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+  }
+  #dict-overlay.open {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  #dict-title-area {
+    padding: 14px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  #dict-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #dict-search {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--muted);
+    font-family: 'MonoEN', monospace;
+    font-size: 13px;
+    color: var(--fg);
+    width: 260px;
+    padding: 4px 0;
+    outline: none;
+    letter-spacing: 0.3px;
+    transition: border-color 0.15s;
+  }
+  #dict-search::placeholder { color: var(--muted); }
+  #dict-search:focus { border-bottom-color: var(--fg); }
+
+  #dict-lang-toggle {
+    background: none; border: none; cursor: pointer;
+    font-family: 'MonoEN', monospace; font-size: 13px;
+    color: var(--fg); letter-spacing: 0.3px; padding: 0;
+    transition: opacity 0.15s;
+  }
+  #dict-lang-toggle:hover, #dict-lang-toggle.active { opacity: 0.45; }
+
+
+  #dict-big-title {
+    font-family: 'NavBold', 'MonoEN', monospace;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: 0;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  #dict-close {
+    font-family: 'MonoEN', monospace;
+    font-size: 13px;
+    color: var(--fg);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: opacity 0.15s;
+    letter-spacing: 0.3px;
+  }
+  #dict-close:hover { opacity: 0.4; }
+
+  #dict-body {
+    padding: 0 32px 60px;
+  }
+
+  /* ── GALLERY OVERLAY — slides in from right ── */
+  #gallery-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 30000;
+    background: #dedede;
+    transform: translateX(100%);
+    transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+    scrollbar-width: none;
+  }
+  #gallery-overlay::-webkit-scrollbar { width: 0; }
+  #gallery-overlay.open {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  #gallery-title-area {
+    padding: 14px 20px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #gallery-big-title {
+    font-family: 'NavBold', 'MonoEN', monospace;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: 0;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  #gallery-close {
+    font-family: 'MonoEN', monospace;
+    font-size: 13px;
+    color: var(--fg);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: opacity 0.15s;
+    letter-spacing: 0.3px;
+  }
+  #gallery-close:hover { opacity: 0.4; }
+
+  #gallery-grid {
+    padding: 0 0 120px;
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .gallery-item {
+    cursor: pointer;
+  }
+
+  .gallery-img-wrap {
+    width: 100%;
+    line-height: 0;
+  }
+
+  .gallery-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.22s;
+  }
+
+  .gallery-img-wrap img:hover {
+    opacity: 0.88;
+  }
+
+  .gallery-caption {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fg);
+    padding-top: 12px;
+    border-top: 1px solid var(--fg);
+    margin-top: 14px;
+  }
+
+  .gallery-caption-num {
+    display: inline;
+    font-family: 'MonoEN', monospace;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .gallery-caption-ko {
+    display: block;
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+  }
+
+  .gallery-caption-en {
+    display: block;
+    font-family: 'MonoEN', monospace;
+    opacity: 0.55;
+  }
+
+  .gallery-caption-side {
+    display: block;
+    font-family: 'SDGothicKO', 'MonoEN', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    opacity: 0.45;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 860px) {
+    #gallery-grid { max-width: 100%; padding: 0 24px 80px; }
+  }
+
+  @media (max-width: 480px) {
+    #gallery-grid { padding: 0 16px 60px; gap: 56px; }
+  }
+
+  /* 6-column grid: NO | KO | EN | CATEGORY | DEFINITION | SOURCE */
+  .dict-col-header,
+  .dict-entry {
+    display: grid;
+    grid-template-columns: 48px 130px 160px 220px 1fr 120px;
+    gap: 0 16px;
+    align-items: start;
+  }
+
+  .dict-col-header {
+    padding: 14px 0 8px;
+  }
+
+  .dict-col-header > span {
+    font-family: 'MonoEN', monospace;
+    font-size: 16px;
+    color: var(--fg);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s;
+  }
+  .dict-col-header > span:hover { opacity: 0.5; }
+  .dict-col-header > span.sort-active { opacity: 0.5; }
+
+  .dict-entry {
+    padding: 5px 0;
+    position: relative;
+  }
+  .dict-entry:hover::before,
+  .dict-entry--highlight::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: -32px; right: -32px;
+    background: rgba(0,0,0,0.045);
+    z-index: -1;
+  }
+
+  /* All entry cells — uniform size & color */
+  .dict-entry-no,
+  .dict-entry-ko,
+  .dict-entry-en,
+  .dict-entry-cat,
+  .dict-entry-def,
+  .dict-entry-src {
+    font-size: 16px;
+    color: var(--fg);
+    line-height: 1.4;
+  }
+
+  .dict-entry-no  { font-family: 'MonoEN', monospace; letter-spacing: 0.2px; position: relative; top: -2px; }
+  .dict-entry-ko  { font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px; letter-spacing: 0; word-break: keep-all; }
+  .dict-entry-en  { font-family: 'MonoEN', monospace; letter-spacing: 0.2px; position: relative; top: -2px; }
+  .dict-entry-cat { font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px; letter-spacing: 0; word-break: keep-all; }
+  .dict-entry-def { font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px; letter-spacing: 0; word-break: keep-all; }
+  .dict-entry-src { font-family: 'SDGothicKO', 'MonoEN', sans-serif; font-size: 15px; letter-spacing: 0; word-break: keep-all; }
+  .dict-entry-cat--en { font-family: 'MonoEN', monospace; letter-spacing: 0.2px; word-break: normal; position: relative; top: -2px; }
+  .dict-entry-def--en { font-family: 'MonoEN', monospace; letter-spacing: 0.2px; word-break: normal; position: relative; top: -2px; }
+
+  #dict-overlay::-webkit-scrollbar { width: 4px; }
+  #dict-overlay::-webkit-scrollbar-track { background: transparent; }
+  #dict-overlay::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); }
+
+  /* ── FOOTER ── */
+  #site-footer {
+    position: fixed;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    text-align: center;
+    font-family: 'MonoEN', monospace;
+    font-size: 11px;
+    color: #000;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+  }
+
+  /* ── ENGLISH FONT SIZE +1px ── */
+  .card-num, .hud-line, #hud-mode, .modal-value-en,
+  #site-footer { font-size: 12px; }
+
+  .about-axis-name, .about-right-axis-name { font-size: 13px; }
+
+  #btn-float, #btn-split, #modal-close, .modal-label, .modal-value-num,
+  #about-tb-logo, #about-tb-title, #about-close, .about-section-title,
+  .about-axis-val, .about-side-key, .about-right-sec-title,
+  .about-axis-en-val, .about-side-en-key { font-size: 14px; }
+
+  #about-nav a { font-size: 16px; }
+
+  .about-text-en, .about-axis-en, .about-side-intro-en, .about-side-en { font-size: 16px; }
+
+  .axis-label { font-size: 19px; }
+
+  /* ── KOREAN FONT METRICS ── */
+  .modal-title, .modal-value,
+  .about-text, .about-axis-ko, .about-side-intro, .about-side-ko,
+  .dict-entry-ko, .dict-entry-cat, .dict-entry-def {
+    letter-spacing: 0;
+    transform: scaleX(0.97);
+    transform-origin: left center;
+  }
+</style>
+</head>
+<body>
+
+
+<div id="site-title" aria-hidden="true">
+  <div>Tri-Axis</div>
+  <div>of</div>
+  <div>Rules</div>
+</div>
+
+<div id="top-right-btns">
+  <button id="dict-btn">RULES DICTIONARY</button>
+  <button id="gallery-btn">GALLERY</button>
+  <button id="about-btn">ABOUT</button>
+</div>
+
+
+<div id="about-overlay">
+  <div id="about-top">
+    <div style="display:flex;align-items:center;gap:20px;margin-left:auto;">
+      <button id="about-lang-toggle">EN</button>
+      <button id="about-close">CLOSE ✕</button>
+    </div>
+  </div>
+  <div id="about-body">
+
+    <!-- Korean -->
+    <div id="about-ko">
+      <div class="about-panel-section">
+        <div class="about-panel-title">1. About</div>
+        <p class="about-panel-text">우리는 수없이 많은 규칙(Rules) 위에서 살아간다. 과학사학자 로레인 다스톤(Lorraine Daston)이 말했듯, 규칙은 우리를 받쳐주는 동시에 묶어두기도 한다. 아침을 깨우는 알람, 도로의 신호등, 식탁의 예법, 그리고 우주를 움직이는 자연법칙까지 — 규칙은 끝없는 혼돈을 조금이나마 예측할 수 있는 형태로 바꿔 놓는다. 서구의 전통에서 규칙이 어떤 의미로 쓰여 왔는지를 따라가다 보면, 그 변화가 문명의 흐름과 나란히 움직여 왔다는 걸 알게 된다. 한때 규칙은 삶의 구체적인 맥락을 담아내는 '두껍고 유연한 모델'에 가까웠지만, 시간이 지나며 점차 자동화를 향하는 '얇고 경직된 알고리즘' 쪽으로 옮겨 왔다.</p>
+        <p class="about-panel-text">TRI-AXIS OF RULES는 이렇게 흩어진 규칙들을 한자리에 모아, 일정한 기준에 따라 분류하고 정렬해 본다. 세상을 이루는 다양한 규범을 X, Y, Z 세 개의 축으로 이루어진 좌표 위에 놓아보려는 시도다. 지금 웹에는 역사적·과학적으로 의미가 있는 110개의 규칙만 올라와 있지만, 이 분류 방식 자체는 이론상 어떤 규칙에도 적용할 수 있도록 설계되어 있다. 규칙을 고정된 틀로 보기보다는, 보편과 특수 사이, 질서와 우연 사이를 오가며 끊임없이 모양을 바꾸는 무언가로 바라본다. 그렇게 규칙이 만들어지고 몸에 배고, 때로 흔들리거나 깨지는 순간들을 입체적으로 다시 들여다본다.</p>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">2. 규칙의 세 가지 유형</div>
+        <div class="about-panel-item"><div class="about-panel-val">1</div><div class="about-panel-desc-ko">측정과 계산의 도구: 규칙의 어원인 그리스어 카논(kanon)과 라틴어 레굴라(regula)는 원래 곧은 갈대나 판자, 곧 '자(straightedge)'를 가리키는 말이었다. 이 단순한 기준점이 수학과 천문 계산표를 거쳐 지금의 디지털 알고리즘에까지 이어졌다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">2</div><div class="about-panel-desc-ko">모델, 혹은 본보기: 무언가를 재는 도구를 넘어, 따라 하고 닮고 싶은 완벽한 기준을 가리키기도 한다. 폴리클레이토스의 조각상 '도리포로스'나 기독교의 '예수의 생애'처럼, 추상적인 원칙을 눈에 보이는 형상으로 옮겨 사람들이 따르게 만드는 쪽에 가깝다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">3</div><div class="about-panel-desc-ko">법: 행동을 제약하고 사회에 질서를 세우는 강제적인 규칙들이다. 그리스어 노모스(nomos)와 맞닿아 있으며, 종교의 계율(캐논법)부터 보편적인 자연법, 오늘날의 자잘한 행정 규제까지를 두루 아우른다.</div></div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">3. 규칙을 가늠하는 세 가지 속성</div>
+        <div class="about-panel-item"><div class="about-panel-val">1</div><div class="about-panel-desc-ko">기술의 두께: '두꺼운 규칙'은 수많은 사례와 예외로 채워져 상황에 따른 변화를 받아들이는 모델에 가깝다. 반대로 '얇은 규칙'은 맥락을 걷어내고 기계적인 실행 명령만 남긴 알고리즘에 가깝다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">2</div><div class="about-panel-desc-ko">적용의 유연성: 사람이 상황을 보고 규칙을 조금씩 구부려 적용하는 '유연함'과, 예외 없이 똑같이 수행하기를 요구하는 '경직됨' 사이의 차이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">3</div><div class="about-panel-desc-ko">도메인의 보편성: 시공간을 넘어 어디에나 적용되는 '보편적 법칙'과, 특정한 상황에만 해당하는 '미시적 규제' 사이의 차이다.</div></div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">4. 세 개의 축</div>
+        <p class="about-panel-text">아카이브를 떠받치는 세 축은, 앞서 말한 대립하는 속성들을 시각적인 스펙트럼으로 바꿔 놓은 것이다. 이론상 모든 규칙은 이 세 축이 만나는 3차원 공간 안의 한 점으로 자리를 잡는다.</p>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">X축 — 얼마나 얇고 유연한가</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-ko">두꺼운 규칙 / 유연한 모델: 예시와 예외가 많고, 상황에 따른 변화와 사람의 판단(재량)을 중요하게 본다.</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-ko">얇은 규칙 / 경직된 알고리즘: 해석의 여지를 최대한 줄이고 기계적인 실행 명령만 남긴다. 세계가 안정적이고 예측 가능하다고 전제한다.</div></div>
+        </div>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">Y축 — 얼마나 보편적인가</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-ko">일반성 / 보편적 법칙: 중력의 법칙이나 인륜적인 명제처럼, 시공간을 가리지 않고 누구에게나 적용되는 넓은 영역이다.</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-ko">특이성 / 미시적 규제: 특정 거리의 주차 규정, 복장 제한, 오물 투척 경고처럼 좁고 구체적인 상황에만 해당하는 규제다.</div></div>
+        </div>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">Z축 — 맥락이 얼마나 안정적인가</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-ko">혼돈 / 예외 상태: 전쟁, 팬데믹, 재해처럼 기존 규칙이 힘을 잃는 시기다. 불확실성이 커지고 기준이 유동적으로 흔들린다.</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-ko">질서 / 표준화: 앞일을 어느 정도 내다볼 수 있는 상태다. 규칙이 몸과 시스템에 깊이 배어, 따로 의식하지 않아도 질서가 유지된다.</div></div>
+        </div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">5. 구조와 분류: 질서의 탄생과 붕괴</div>
+        <p class="about-panel-text">여기 모인 규칙들은 그 자체로 하나의 '모델(Paradigm)'이 될 만한, 성격이 뚜렷한 사례들이다. 규칙의 본질을 가장 또렷하게 보여주는 데이터 카드들을 질서가 세워지는 쪽(SIDE A)과 흔들리는 쪽(SIDE B), 두 갈래로 다시 한 번 나누어볼 수 있다.</p>
+        <div class="about-panel-item"><div class="about-panel-val">A</div><div class="about-panel-desc-ko">질서를 세우는 쪽 — 혼란을 줄이고 예측 가능한 세계를 만들기 위해, 사람이 규칙을 정리해 일상과 시스템 곳곳에 들여온 흐름이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A1</div><div class="about-panel-desc-ko">자연과 물리: 행성의 공전 궤도, 빛의 프리즘 분산, 원소 주기율표처럼 인간 사회가 생기기 전부터 스스로 작동해 온 우주의 질서.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A2</div><div class="about-panel-desc-ko">시스템과 표준: 사회를 효율적으로 굴리기 위해 만든 인위적인 제도. 그리니치 표준시, 성문법, 바코드와 QR코드처럼 세계를 일정한 격자에 맞춰 정리하는 장치들이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A3</div><div class="about-panel-desc-ko">예술, 놀이, 루틴: 강제력은 없지만 행위에 리듬과 균형을 더하는 약속. 바둑의 포석, 전통 찻자리의 기물 배치, 타이포그래피 가이드처럼 익히고 반복하며 몸에 배는 규칙들이다.</div></div>
+        <div class="about-panel-item" style="margin-top:12px;"><div class="about-panel-val">B</div><div class="about-panel-desc-ko">질서가 흔들리는 쪽 — 단단해 보이던 규칙이 아날로그의 한계, 시스템의 과부하, 사회적 저항, 그리고 자연의 엔트로피와 부딪혀 무너지는 예외의 순간들이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B1</div><div class="about-panel-desc-ko">오류와 일탈: 의도치 않은 빈틈이나 기술적 한계에서 생기는 작은 균열. 인쇄물의 핀이 어긋나거나, 카세트테이프가 씹히거나, 화면에 글리치가 끼는 것처럼 질서를 향하다 미끄러진 자잘한 에러들이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B2</div><div class="about-panel-desc-ko">갈등과 왜곡: 권력이나 시스템이 흔들리며 규칙이 제 기능을 잃는 상태. 주가 폭락이 그린 차트, 블루스크린, 행정 마비(예외 상태), 파업 현장의 바리케이드 같은 장면들이다.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B3</div><div class="about-panel-desc-ko">자연의 무질서: 인간이 그어 놓은 격자를 넘어 사방으로 퍼지는 자연 그대로의 흐름. 지표면의 단층선, 깨진 유리의 파편, 물속으로 번지는 잉크처럼 인위적인 질서를 무력화하는 움직임들이다.</div></div>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="about-en">
+      <div class="about-panel-section">
+        <div class="about-panel-title">1. About</div>
+        <p class="about-panel-text-en">We live upon countless rules. As historian of science Lorraine Daston noted, rules support us while simultaneously binding us. From the morning alarm that wakes us and traffic lights on the road, to dining etiquette and the laws of nature governing the universe—rules transform endless chaos into a somewhat predictable form. Tracing how rules have been understood in the Western tradition reveals that their evolution has moved in tandem with the flow of civilization. While rules were once akin to a "thick and flexible model" that captured the specific context of life, over time they have gradually shifted toward a "thin and rigid algorithm" geared toward automation.</p>
+        <p class="about-panel-text-en">The TRI-AXIS OF RULES gathers these scattered rules into one place, classifying and arranging them according to set criteria. It is an attempt to plot the diverse norms that shape our world onto a coordinate system composed of three axes: X, Y, and Z. Although the web currently features only 110 historically and scientifically significant rules, this classification system is theoretically designed to apply to any rule. Rather than viewing rules as fixed frameworks, it perceives them as dynamic entities that constantly reshape themselves, shifting between the universal and the particular, and between order and chance. In doing so, it takes a multi-dimensional look at the moments when rules are created, internalized, and sometimes shaken or broken.</p>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">2. Three Types of Rules</div>
+        <div class="about-panel-item"><div class="about-panel-val">1</div><div class="about-panel-desc-en">Tools of Measurement and Calculation: The etymological roots of "rule"—the Greek kanon and Latin regula—originally referred to a straight reed or board, i.e., a "straightedge." This simple baseline evolved through mathematics and astronomical calculation tables to become today's digital algorithms.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">2</div><div class="about-panel-desc-en">Models or Exemplars: Beyond a tool for measurement, a rule can also signify an ideal standard to emulate and resemble. Like Polykleitos's sculpture Doryphoros or the "Life of Jesus" in Christianity, it translates abstract principles into visible forms for people to follow.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">3</div><div class="about-panel-desc-en">Laws: These are binding rules that constrain behavior and establish social order. Connected to the Greek nomos, they encompass everything from religious commandments (canon law) and universal natural laws to today's minute administrative regulations.</div></div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">3. Three Attributes for Gauging Rules</div>
+        <div class="about-panel-item"><div class="about-panel-val">1</div><div class="about-panel-desc-en">Thickness of Specification: A "thick rule" is filled with numerous precedents and exceptions, making it akin to a model that accommodates situational changes. Conversely, a "thin rule" strips away context, leaving behind only mechanical execution commands like an algorithm.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">2</div><div class="about-panel-desc-en">Flexibility of Application: The contrast between "flexibility"—where humans bend the rule slightly based on the situation—and "rigidity," which demands identical execution without exception.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">3</div><div class="about-panel-desc-en">Universality of Domain: The distinction between "universal laws" that apply anywhere across time and space, and "micro-regulations" that apply only to specific circumstances.</div></div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">4. The Three Axes</div>
+        <p class="about-panel-text-en">The three axes supporting the archive translate the aforementioned opposing attributes into a visual spectrum. In theory, every rule occupies a single point within the three-dimensional space where these three axes intersect.</p>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">X-Axis — How Thin and Flexible It Is</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-en">Thick Rule / Flexible Model: Rich in examples and exceptions; prioritizes situational adaptation and human judgment (discretion).</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-en">Thin Rule / Rigid Algorithm: Minimizes room for interpretation, leaving only mechanical execution commands. It presupposes a stable and predictable world.</div></div>
+        </div>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">Y-Axis — How Universal It Is</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-en">Generality / Universal Law: A broad domain that applies to everyone regardless of time and space, such as the law of gravity or universal moral propositions.</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-en">Specificity / Micro-Regulation: Regulations applicable only to narrow, specific situations, such as parking rules on a particular street, dress codes, or littering warnings.</div></div>
+        </div>
+        <div class="about-panel-axis">
+          <div class="about-panel-axis-name">Z-Axis — How Stable the Context Is</div>
+          <div class="about-panel-item"><div class="about-panel-val">0</div><div class="about-panel-desc-en">Chaos / State of Exception: Periods when existing rules lose their power, such as during wars, pandemics, or disasters. Uncertainty grows, and standards fluctuate fluidly.</div></div>
+          <div class="about-panel-item"><div class="about-panel-val">100</div><div class="about-panel-desc-en">Order / Standardization: A state where the future is reasonably predictable. Rules are deeply ingrained in bodies and systems, maintaining order without conscious effort.</div></div>
+        </div>
+      </div>
+      <div class="about-panel-section">
+        <div class="about-panel-title">5. Structure and Classification: The Birth and Collapse of Order</div>
+        <p class="about-panel-text-en">The rules collected here are distinct cases, each worthy of being a "paradigm" in its own right. The data cards that most clearly illustrate the essence of rules can be divided into two main tracks: those that establish order (SIDE A) and those where order is disrupted (SIDE B).</p>
+        <div class="about-panel-item"><div class="about-panel-val">A</div><div class="about-panel-desc-en">Establishing Order: This represents the movement where humans organize rules and integrate them into daily life and systems to reduce chaos and create a predictable world.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A1</div><div class="about-panel-desc-en">Nature and Physics: The cosmic order that has operated on its own since before human society existed, such as planetary orbits, the prismatic dispersion of light, and the periodic table of elements.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A2</div><div class="about-panel-desc-en">Systems and Standards: Artificial institutions created to run society efficiently. These are devices that align the world to a specific grid, such as Greenwich Mean Time, statutory law, barcodes, and QR codes.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">A3</div><div class="about-panel-desc-en">Art, Play, and Routine: Agreements that lack coercive power but add rhythm and balance to actions. These are rules learned and internalized through repetition, such as opening formations (pohseok) in Go, the arrangement of utensils in a traditional tea ceremony, or typography style guides.</div></div>
+        <div class="about-panel-item" style="margin-top:12px;"><div class="about-panel-val">B</div><div class="about-panel-desc-en">Disrupting Order: These are exceptional moments when seemingly rigid rules collide with analog limitations, system overloads, social resistance, and natural entropy, causing them to collapse. The closer a rule is to a thin and rigid algorithm, the more easily a tiny error can escalate into a fatal rupture.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B1</div><div class="about-panel-desc-en">Errors and Deviations: Small fractures arising from unintended loopholes or technical limitations. These are minor glitches and errors where the pursuit of order slips up, such as misaligned print registration, tangled cassette tapes, or screen glitches.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B2</div><div class="about-panel-desc-en">Conflict and Distortion: States where rules lose their function due to destabilized power dynamics or systems. Scenes include stock market crash charts, blue screens of death, administrative paralysis (states of exception), and barricades at strike sites.</div></div>
+        <div class="about-panel-item"><div class="about-panel-val">B3</div><div class="about-panel-desc-en">Natural Disorder: The raw flow of nature spreading outward, transcending the grids drawn by humans. These movements neutralize artificial order, exemplified by fault lines on the Earth's surface, shards of broken glass, or ink diffusing through water.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer">This website will NOT stop updating until Jangho Park is officially released from his graduation exhibition...</div>
+
+<div id="viewport">
+  <div id="canvas"></div>
+</div>
+
+<div id="hud">
+  <div id="hud-meta">
+<span id="hud-mode">Free Float</span>
+    <span class="hud-line" id="hud-pos">0, 0</span>
+  </div>
+</div>
+
+<div id="axis-control">
+  <button id="btn-float">↺ float</button>
+  <button id="btn-split">A | B</button>
+  <svg id="axis-svg" width="220" height="192" viewBox="0 0 220 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- origin -->
+    <circle cx="108" cy="124" r="3.5" fill="#dedede"/>
+
+    <!-- X axis -->
+    <line x1="108" y1="124" x2="200" y2="124" stroke="#dedede" stroke-width="1.5"/>
+    <polyline points="192,118 200,124 192,130" stroke="#dedede" stroke-width="1.5" fill="none"/>
+
+    <!-- Y axis -->
+    <line x1="108" y1="124" x2="108" y2="16"  stroke="#dedede" stroke-width="1.5"/>
+    <polyline points="102,24 108,16 114,24"    stroke="#dedede" stroke-width="1.5" fill="none"/>
+
+    <!-- Z axis (perspective: down-left) -->
+    <line x1="108" y1="124" x2="20" y2="180" stroke="#dedede" stroke-width="1.5"/>
+    <polyline points="30,174 20,180 26,170"   stroke="#dedede" stroke-width="1.5" fill="none"/>
+
+    <!-- Clickable labels -->
+    <text id="btn-x" class="axis-label" x="207" y="130">X</text>
+    <text id="btn-y" class="axis-label" x="98"  y="12" >Y</text>
+    <text id="btn-z" class="axis-label" x="1"   y="192">Z</text>
+  </svg>
+</div>
+
+<div id="modal-overlay">
+  <button id="modal-close">✕</button>
+  <div id="lightbox-inner">
+    <img id="lightbox-img" src="" alt="" style="display:none;">
+    <div id="lightbox-placeholder"></div>
+    <div id="lightbox-meta">
+      <div class="modal-card-id" id="m-id"></div>
+      <div class="modal-title-en" id="m-title-en"></div>
+    </div>
+  </div>
+</div>
+
+<div id="dict-overlay">
+  <div id="dict-title-area">
+    <div id="dict-title-row">
+      <div id="dict-big-title">RULES<br>DICTIONARY</div>
+      <div style="display:flex;align-items:center;gap:20px;">
+        <button id="dict-lang-toggle">EN</button>
+        <button id="dict-close">CLOSE ✕</button>
+      </div>
+    </div>
+    <input id="dict-search" type="text" placeholder="SEARCH" autocomplete="off" spellcheck="false">
+  </div>
+  <div id="dict-body">
+    <div class="dict-col-header">
+      <span>NO.</span>
+      <span>한국어</span>
+      <span>ENGLISH</span>
+      <span>CATEGORY</span>
+      <span>DEFINITION</span>
+      <span>SOURCE</span>
+    </div>
+    <div id="dict-entries"></div>
+  </div>
+</div>
+
+<div id="gallery-overlay">
+  <div id="gallery-title-area">
+    <div id="gallery-big-title">GALLERY</div>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <button id="gallery-close">CLOSE ✕</button>
+    </div>
+  </div>
+  <div id="gallery-grid"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+//  DATASET
+// ═══════════════════════════════════════════════════════════
+const dataset = [
+    { id: 1, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "중력의 궤도", x: 98, y: 2, z: 99, hint: "", image: "image2/1_st_616232054.png" },
+    { id: 2, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "피보나치 수열과 프랙탈", x: 97, y: 5, z: 98, hint: "", image: "image2/2_st_61623210.png" },
+    { id: 3, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "결정 격자 구조", x: 99, y: 3, z: 99, hint: "", image: "image2/3_st_61623213.png" },
+    { id: 4, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "빛의 프리즘 분산", x: 96, y: 4, z: 97, hint: "", image: "image2/4_st_61623215.png" },
+    { id: 5, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "튜링 패턴", x: 82, y: 15, z: 84, hint: "", image: "image2/5_st_61623218.png" },
+    { id: 6, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "베르나르 셀", x: 79, y: 12, z: 81, hint: "", image: "image2/6_st_616232110.png" },
+    { id: 7, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "주상절리의 테셀레이션", x: 84, y: 11, z: 86, hint: "", image: "image2/7_st_616232114.png" },
+    { id: 8, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "리히텐베르크 문양", x: 42, y: 35, z: 38, hint: "", image: "image2/8_st_616232117.png" },
+    { id: 9, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "음파의 클라드니 패턴", x: 61, y: 42, z: 55, hint: "", image: "image2/9_st_616232120.png" },
+    { id: 10, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "식물의 엽서 배열", x: 94, y: 18, z: 91, hint: "", image: "image2/10_st_616232123.png" },
+    { id: 11, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "나선형 은하 구조", x: 98, y: 1, z: 97, hint: "", image: "image2/11_st_616232126.png" },
+    { id: 12, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "코리올리 효과 벡터", x: 86, y: 8, z: 85, hint: "", image: "image2/12_st_616232129.png" },
+    { id: 13, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "보로노이 다이어그램", x: 91, y: 22, z: 88, hint: "", image: "image2/13_st_616232133.png" },
+    { id: 14, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "쿤트관의 정지파", x: 88, y: 25, z: 82, hint: "", image: "image2/14_st_616232135.png" },
+    { id: 15, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "사구의 리플 마크", x: 53, y: 38, z: 49, hint: "", image: "image2/15_st_616232139.png" },
+    { id: 16, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "물의 표면장력 메니스크스", x: 77, y: 41, z: 73, hint: "", image: "image2/16_st_616232142.png" },
+    { id: 17, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "파이 고유값의 분포", x: 99, y: 2, z: 99, hint: "", image: "image2/17_st_61623226.png" },
+    { id: 18, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "거대 갈대", x: 48, y: 45, z: 42, hint: "곧게 뻗은 갈대 식물 일러스트와 자연이 부여한 고유의 수직성 및 단위 눈금선 구조.", image: "image2/18_st_616232210.png" },
+    { id: 19, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "뉴턴의 운동 법칙", x: 99, y: 1, z: 99, hint: "", image: "image2/19_st_616232215.png" },
+    { id: 20, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "열역학 제2법칙", x: 98, y: 1, z: 98, hint: "", image: "image2/20_st_616232220.png" },
+    { id: 21, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "훔볼트의 등온선", x: 72, y: 33, z: 68, hint: "자연의 규칙성을 화산 단면도 위에 등고선과 유기적인 서선(Flow line)으로 시각화.", image: "image2/21_st_616232223.png" },
+    { id: 22, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "데카르트의 충돌 법칙", x: 93, y: 28, z: 89, hint: "", image: "image2/22_st_616232227.png" },
+    { id: 23, side: "SIDE A1. 거시적 구속 (자연/물리)", title: "물의 팽창 규칙", x: 78, y: 32, z: 74, hint: "", image: "image2/23_st_616232240.png" },
+    { id: 24, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "도리포로스", x: 54, y: 48, z: 77, hint: "대리석 조각상 표면 위에 가동되는 인체의 표준적인 기하학적 비례 그리드선.", image: "image2/24_st_616232247.png" },
+    { id: 25, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "베살리우스의 인체 모델", x: 57, y: 51, z: 79, hint: "의학 해부 드로잉 격자 구조와 표준적 신체의 무결성을 보여주는 정형화된 외곽선.", image: "image2/25_st_616232252.png" },
+    { id: 26, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "고전 조각상의 비율 측정", x: 52, y: 49, z: 75, hint: "18세기 백과사전 판화 특유의 세밀한 해칭선과 신체를 가로지르는 치수선 및 눈금선.", image: "image2/26_st_61704341.png" },
+    { id: 27, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "성 베네딕토의 규칙", x: 23, y: 44, z: 81, hint: "", image: "image2/27_st_616232259.png" },
+    { id: 28, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "예술과 실천", x: 29, y: 53, z: 58, hint: "손의 움직임과 추상 격자 규칙을 직조 형상으로 연결한 징검다리 판화의 조형성.", image: "image2/28_st_61623232.png" },
+    { id: 29, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "부지런함과 경험의 알레고리", x: 26, y: 56, z: 54, hint: "인물화 주위에 자연스럽게 흩어진 수수께끼 같은 도구들의 느슨하고 유기적인 배치 구조.", image: "image2/29_st_61623237.png" },
+    { id: 30, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "호메로스의 《일리아스》", x: 21, y: 47, z: 63, hint: "", image: "image2/30_st_616232312.png" },
+    { id: 31, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "성 베네딕토 규칙", x: 8, y: 78, z: 29, hint: "", image: "image2/31_st_616232316.png" },
+    { id: 32, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "침묵 조항의 예외", x: 4, y: 82, z: 24, hint: "", image: "image2/32_st_616232326.png" },
+    { id: 33, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "야간 기도의 루틴", x: 53, y: 57, z: 78, hint: "", image: "image2/33_st_616232329.png" },
+    { id: 34, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "구세주의 생애", x: 49, y: 28, z: 82, hint: "", image: "image2/34_st_616232333.png" },
+    { id: 35, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "아리스토텔레스의 레스보스 자", x: 12, y: 48, z: 56, hint: "", image: "image2/35_st_616232338.png" },
+    { id: 36, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "법률가들의 판례 유추", x: 7, y: 52, z: 48, hint: "", image: "image2/36_st_616232341.png" },
+    { id: 37, side: "SIDE A2. 두꺼운 규칙 (관습/해석)", title: "전통 찻자리의 기물 배치", x: 27, y: 79, z: 46, hint: "완벽한 직선은 아니지만 주전자와 찻잔이 서로 은은한 간격과 시선 유도를 가지는 여백의 구도.", image: "image2/37_st_61704319.png" },
+    { id: 38, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "국기 작도법 규격", x: 97, y: 78, z: 96, hint: "", image: "image2/38_st_616232346.png" },
+    { id: 39, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "먼셀 컬러 트리", x: 95, y: 54, z: 92, hint: "", image: "image2/39_st_616232350.png" },
+    { id: 40, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "ISO 픽토그램", x: 98, y: 8, z: 99, hint: "", image: "image2/40_st_616232353.png" },
+    { id: 41, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "오선지 악보 표기법", x: 96, y: 47, z: 94, hint: "", image: "image2/41_st_616232357.png" },
+    { id: 42, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "요제프 뮐러 브로크만 그리드", x: 94, y: 52, z: 93, hint: "", image: "image2/42_st_61623241.png" },
+    { id: 43, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "플림솔 라인", x: 96, y: 79, z: 95, hint: "", image: "image2/43_st_61623245.png" },
+    { id: 44, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "QR 코드 매트릭스 규격", x: 99, y: 98, z: 98, hint: "", image: "image2/44_st_61623249.png" },
+    { id: 45, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "표준 회로도 기호", x: 97, y: 46, z: 94, hint: "", image: "image2/45_st_616232413.png" },
+    { id: 46, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "천문 성도", x: 95, y: 7, z: 92, hint: "", image: "image2/46_st_616232416.png" },
+    { id: 47, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "건축 도면 벽체 기호", x: 98, y: 77, z: 96, hint: "", image: "image2/47_st_616232419.png" },
+    { id: 48, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "ISO 216 종이 규격", x: 99, y: 99, z: 99, hint: "", image: "image2/48_st_616232422.png" },
+    { id: 49, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "화학 원소 주기율표", x: 97, y: 4, z: 95, hint: "", image: "image2/49_st_616232425.png" },
+    { id: 50, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "주식 캔들차트 구조", x: 93, y: 76, z: 82, hint: "", image: "image2/50_st_616232430.png" },
+    { id: 51, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "DIN 1451 도로 서체", x: 96, y: 78, z: 95, hint: "", image: "image2/51_st_616232436.png" },
+    { id: 52, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "뒤러의 다각형 작도", x: 94, y: 51, z: 91, hint: "", image: "image2/52_st_616232440.png" },
+    { id: 53, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "중국의 산공", x: 92, y: 48, z: 89, hint: "대나무 계산 막대기들의 일정한 간격과 각도가 만드는 규칙적인 평행 격자 구조.", image: "image2/53_st_616232443.png" },
+    { id: 54, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "바빌로니아 수학 점토판", x: 91, y: 49, z: 88, hint: "쐐기문자가 새겨진 사각형 진흙판의 질감과 행간이 만드는 고대의 타이포그래피 정렬.", image: "image2/54_st_616232448.png" },
+    { id: 55, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "핀 제조 공정", x: 96, y: 79, z: 94, hint: "공장 노동자들의 작업 모습을 칸으로 나누어 순차적으로 보여주는 분업 레이아웃.", image: "image2/55_st_616232451.png" },
+    { id: 56, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "로그표 작업장 분업도", x: 95, y: 81, z: 92, hint: "피라미드 구조의 관료적 위계 조직도 챠트 레이아웃과 엄격하게 분류된 섹션선.", image: "image2/56_st_616232456.png" },
+    { id: 57, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "자카드 직기 펀치 카드", x: 98, y: 82, z: 96, hint: "구멍이 송송 뚫린 격자형 펀치 카드가 만드는 0과 1의 비트맵 패턴과 반복적 격자망.", image: "image2/57_st_61623251.png" },
+    { id: 58, side: "SIDE A3. 얇은 규칙 (시스템/표준)", title: "배비지의 계산기 설계도", x: 99, y: 84, z: 98, hint: "복잡한 기계 톱니바퀴들과 축들이 완벽하게 맞물린 초정밀 기하도면의 치밀함.", image: "image2/58_st_61623255.png" },
+    { id: 59, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "울리포의 리포그램", x: 52, y: 78, z: 49, hint: "", image: "image2/59_st_61623259.png" },
+    { id: 60, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "솔 르윗의 지시문", x: 58, y: 81, z: 76, hint: "", image: "image2/60_st_616232512.png" },
+    { id: 61, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "바둑 및 체스 기보", x: 79, y: 76, z: 82, hint: "19x19 격자점 위에 유기적인 흑백의 돌들이 올려지며 집의 경계를 만들어가는 정형/비정형의 조화.", image: "image2/61_st_616232516.png" },
+    { id: 62, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "이슬람 아라베스크 패턴", x: 81, y: 74, z: 79, hint: "", image: "image2/62_st_616232521.png" },
+    { id: 63, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "료안지 정원 모래선", x: 47, y: 79, z: 72, hint: "", image: "image2/63_st_616232525.png" },
+    { id: 64, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "기하학적 만다라 구조", x: 54, y: 56, z: 78, hint: "중심점을 기준으로 화려하고 정교한 종교적 기하학 패턴이 사방으로 무한 대칭 확산하는 조형.", image: "image2/64_st_616232529.png" },
+    { id: 65, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "의류 재단 패턴", x: 53, y: 77, z: 76, hint: "", image: "image2/65_st_616232534.png" },
+    { id: 66, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "몬드리안의 규칙", x: 83, y: 54, z: 79, hint: "", image: "image2/66_st_616232538.png" },
+    { id: 67, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "바우하우스 색채 원환", x: 81, y: 52, z: 76, hint: "", image: "image2/67_st_616232543.png" },
+    { id: 68, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "만화 칸 나누기 규칙", x: 49, y: 79, z: 74, hint: "스토리의 긴장감에 따라 사각형 칸의 크기가 찢어지거나 대각선으로 기울어지는 동적 분할 화면.", image: "image2/68_st_616232547.png" },
+    { id: 69, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "아사노하", x: 78, y: 76, z: 81, hint: "", image: "image2/69_st_616232936.png" },
+    { id: 70, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "타이포그래피 커닝", x: 51, y: 78, z: 73, hint: "", image: "image2/70_st_616232555.png" },
+    { id: 71, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "프랑스식 정원", x: 82, y: 77, z: 79, hint: "", image: "image2/71_st_616232559.png" },
+    { id: 72, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "대한민국 태극기 작도 표준", x: 99, y: 99, z: 99, hint: "", image: "image2/72_st_61623262.png" },
+    { id: 73, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "CI/BI 비주얼 가이드라인", x: 98, y: 98, z: 98, hint: "", image: "image2/73_st_61623266.png" },
+    { id: 74, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "마테우스 슈바르츠의 복장", x: 23, y: 89, z: 47, hint: "화려한 자수와 직물 패턴이 돋보이는 인물 일러스트와 색상을 분류하는 컬러 칩 구조.", image: "image2/74_st_61623269.png" },
+    { id: 75, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "파일 검색기", x: 56, y: 76, z: 82, hint: "서류 분류 기계의 폴더 위계 구조와 인덱싱 탭이 계단식으로 나열된 매뉴얼 레이아웃.", image: "image2/75_st_616232613.png" },
+    { id: 76, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "암스테르담 지도", x: 54, y: 79, z: 81, hint: "완벽한 대칭형 부채꼴 도시 계획 지도가 보여주는 동심원 그리드와 방사형 수로망.", image: "image2/76_st_616232616.png" },
+    { id: 77, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "존 하트의 철자법 개정안", x: 52, y: 77, z: 76, hint: "알파벳 철자 규범과 발음 기호를 그리드에 맞춰 수록한 정형화된 타이포그래피.", image: "image2/77_st_616232620.png" },
+    { id: 78, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "1279년 프랑스 요리 제한법", x: 24, y: 92, z: 28, hint: "", image: "image2/78_st_616232623.png" },
+    { id: 79, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "1470년 란트슈트의 뾰족구두 법", x: 21, y: 94, z: 23, hint: "", image: "image2/79_st_616232626.png" },
+    { id: 80, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "1660년 스트라스부르 복장 규칙", x: 26, y: 91, z: 27, hint: "", image: "image2/80_st_616232631.png" },
+    { id: 81, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "1661년 프랑스 레이스 제한법", x: 22, y: 93, z: 21, hint: "", image: "image2/81_st_616232634.png" },
+    { id: 82, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "1750년 파리 노면 청소령", x: 28, y: 91, z: 48, hint: "", image: "image2/82_st_616232637.png" },
+    { id: 83, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "프랑스식 볼 키스", x: 19, y: 83, z: 54, hint: "", image: "image2/83_st_616232641.png" },
+    { id: 84, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "독일어 표준 철자법", x: 53, y: 79, z: 83, hint: "", image: "image2/84_st_616232644.png" },
+    { id: 85, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "영어의 'i before e' 규칙", x: 24, y: 77, z: 49, hint: "", image: "image2/85_st_616232648.png" },
+    { id: 86, side: "SIDE A4. 미시적 관례 (예술/루틴)", title: "Garre-l'eau! 경고 수칙", x: 21, y: 78, z: 52, hint: "", image: "image2/86_st_616232652.png" },
+    { id: 87, side: "SIDE B1. 예외 (특수/일탈)", title: "정의의 여신상", x: 18, y: 47, z: 9, hint: "칼과 저울을 든 여신상 구조 속에서 수평을 이루는 대칭형 저울 기호의 시각적 균형.", image: "image2/87_st_616232656.png" },
+    { id: 88, side: "SIDE B1. 예외 (특수/일탈)", title: "팬데믹 하의 비행 중단", x: 4, y: 49, z: 2, hint: "", image: "image2/88_st_616232945.png" },
+    { id: 89, side: "SIDE B1. 예외 (특수/일탈)", title: "준법 투쟁", x: 21, y: 79, z: 11, hint: "", image: "image2/89_st_61623272.png" },
+    { id: 90, side: "SIDE B1. 예외 (특수/일탈)", title: "아브라함의 이삭 헌제", x: 2, y: 48, z: 3, hint: "", image: "image2/90_st_61623275.png" },
+    { id: 91, side: "SIDE B1. 예외 (특수/일탈)", title: "사법적 사면", x: 3, y: 52, z: 1, hint: "", image: "image2/91_st_61623278.png" },
+    { id: 92, side: "SIDE B1. 예외 (특수/일탈)", title: "규칙 현기증", x: 2, y: 51, z: 4, hint: "", image: "image2/92_st_616232714.png" },
+    { id: 94, side: "SIDE B1. 예외 (특수/일탈)", title: "총동원령", x: 2, y: 49, z: 1, hint: "", image: "image2/94_st_616232720.png" },
+    { id: 96, side: "SIDE B2. 오작동 (결함/에러)", title: "CMYK", x: 3, y: 79, z: 4, hint: "", image: "image2/96_st_616232724.png" },
+    { id: 97, side: "SIDE B2. 오작동 (결함/에러)", title: "TV 브라운관 노이즈", x: 1, y: 48, z: 2, hint: "", image: "image2/97_st_616232728.png" },
+    { id: 98, side: "SIDE B2. 오작동 (결함/에러)", title: "JPEG 압축 아티팩트", x: 12, y: 98, z: 5, hint: "이미지가 극도로 압축되어 경계면이 8x8 픽셀 단위의 뭉개진 계단 현상과 모자이크 덩어리로 변한 외관.", image: "image2/98_st_616232732.png" },
+    { id: 99, side: "SIDE B2. 오작동 (결함/에러)", title: "카세트 테이프 씹힘 현상", x: 4, y: 76, z: 3, hint: "", image: "image2/99_st_616232735.png" },
+    { id: 100, side: "SIDE B2. 오작동 (결함/에러)", title: "3D 프린팅 스파게티 현상", x: 13, y: 97, z: 4, hint: "", image: "image2/100_st_616232740.png" },
+    { id: 101, side: "SIDE B2. 오작동 (결함/에러)", title: "엘리엇-피셔 계산기 조작 표", x: 24, y: 82, z: 19, hint: "인간의 주의력 하락 데이터를 꺾은선으로 표현한 지그재그 그래프와 수치 테이블.", image: "image2/101_st_616232743.png" },
+    { id: 102, side: "SIDE B2. 오작동 (결함/에러)", title: "블루스크린", x: 11, y: 99, z: 1, hint: "OS가 완전히 멈추며 화면 전체가 원색 파란색으로 채워지고 상단에 흰색 고정폭 서체 에러 코드가 뜨는 구조.", image: "image2/102_st_616232747.png" },
+    { id: 103, side: "SIDE B2. 오작동 (결함/에러)", title: "화성 기후 궤도선 추락", x: 14, y: 98, z: 2, hint: "", image: "image2/103_st_616232750.png" },
+    { id: 104, side: "SIDE B2. 오작동 (결함/에러)", title: "해석 기관", x: 22, y: 77, z: 8, hint: "", image: "image2/104_st_616232753.png" },
+    { id: 105, side: "SIDE B3. 저항 (반규칙)", title: "그래피티 태깅", x: 3, y: 82, z: 24, hint: "", image: "image2/105_st_616232758.png" },
+    { id: 106, side: "SIDE B3. 저항 (반규칙)", title: "사이키델릭 포스터", x: 4, y: 81, z: 23, hint: "", image: "image2/106_st_61623282.png" },
+    { id: 107, side: "SIDE B3. 저항 (반규칙)", title: "소련의 엑스레이 '뼈 음악'", x: 2, y: 53, z: 21, hint: "", image: "image2/107_st_61623285.png" },
+    { id: 108, side: "SIDE B3. 저항 (반규칙)", title: "안면 인식 방해 메이크업", x: 12, y: 78, z: 26, hint: "", image: "image2/108_st_61623289.png" },
+    { id: 109, side: "SIDE B3. 저항 (반규칙)", title: "펑크 록 랜섬노트 타이포그래피", x: 5, y: 83, z: 22, hint: "", image: "image2/109_st_616232812.png" },
+    { id: 110, side: "SIDE B3. 저항 (반규칙)", title: "운명의 여신 포르투나", x: 3, y: 52, z: 26, hint: "바퀴와 돛을 든 여신화 주위로 연출된 엔트로피 높은 카오스적 소용돌이와 비정형 구도.", image: "image2/110_st_616232815.png" }
+];
+
+// ═══════════════════════════════════════════════════════════
+//  CONSTANTS
+// ═══════════════════════════════════════════════════════════
+const CANVAS_W = 10000;
+const CANVAS_H = 8000;
+const CARD_W = 140;
+const CARD_H = 105;
+
+// Side → border color
+function getSideColor(side) {
+  if (side.includes('A1')) return '#66fcf1';
+  if (side.includes('A2')) return '#4fc3f7';
+  if (side.includes('A3')) return '#ce93d8';
+  if (side.includes('A4')) return '#a5d6a7';
+  if (side.includes('B1')) return '#ffb74d';
+  if (side.includes('B2')) return '#ef9a9a';
+  if (side.includes('B3')) return '#80cbc4';
+  return '#66fcf1';
+}
+
+// ═══════════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════════
+let camX = 0, camY = 0;
+let camScale = 1.0;
+let velX = 0, velY = 0;
+let isDragging = false;
+let dragStartX = 0, dragStartY = 0;
+let dragLastX = 0, dragLastY = 0;
+let dragDist = 0;
+let tick = 0;
+let currentMode = 'float';
+let animFrame = null;
+// Multi-axis active state
+const activeAxes = { x: false, y: false, z: false };
+
+// ═══════════════════════════════════════════════════════════
+//  BUILD CARDS
+// ═══════════════════════════════════════════════════════════
+const canvasEl = document.getElementById('canvas');
+const cards = [];
+
+function rnd(min, max) { return min + Math.random() * (max - min); }
+
+dataset.forEach((data, idx) => {
+  // Initial position concentrated near canvas center for dense visibility
+  const cx = CANVAS_W / 2, cy = CANVAS_H / 2;
+  const posX = rnd(cx - 1800, cx + 1800);
+  const posY = rnd(cy - 1200, cy + 1200);
+  const phase = rnd(0, Math.PI * 2);
+  const vx = (Math.random() - 0.5) * 0.4;
+  const vy = (Math.random() - 0.5) * 0.4;
+  const vz = (Math.random() - 0.5) * 0.4;
+  const depth = rnd(-150, 150);
+
+  // Create DOM element
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.style.borderLeftColor = getSideColor(data.side);
+
+  // Number above the card box
+  const num = document.createElement('div');
+  num.className = 'card-num';
+  num.textContent = `#${String(data.id).padStart(3, '0')}`;
+  el.appendChild(num);
+
+  // Image box
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  if (data.image) {
+    const img = document.createElement('img');
+    img.className = 'card-img';
+    img.alt = data.title;
+    img.onload = () => img.classList.add('loaded');
+    img.src = data.image;
+    body.appendChild(img);
+  } else {
+    const ph = document.createElement('div');
+    ph.className = 'card-placeholder';
+    body.appendChild(ph);
+  }
+
+  el.appendChild(body);
+
+  canvasEl.appendChild(el);
+
+  const card = {
+    id: data.id,
+    data,
+    el,
+    posX, posY,
+    vx, vy, vz,
+    phase,
+    depth,
+    targetX: null,
+    targetY: null,
+    targetZDepth: null,
+    targetStackIndex: null,
+    x: data.x,
+    y: data.y,
+    z: data.z,
+  };
+
+  // Set initial transform
+  el.style.transform = `translate3d(${posX}px,${posY}px,0)`;
+
+  // Click handler
+  el.addEventListener('click', (e) => {
+    if (dragDist > 5) return;
+    e.stopPropagation();
+    openModal(data);
+  });
+
+  cards.push(card);
+});
+
+// ═══════════════════════════════════════════════════════════
+//  CAMERA
+// ═══════════════════════════════════════════════════════════
+function updateCanvasTransform() {
+  canvasEl.style.transform = `translate3d(${camX}px,${camY}px,0) scale(${camScale})`;
+  document.getElementById('hud-pos').textContent =
+    `CAM: ${Math.round(-camX)}, ${Math.round(-camY)}`;
+}
+
+// Center camera on canvas center initially
+camX = window.innerWidth / 2 - CANVAS_W / 2;
+camY = window.innerHeight / 2 - CANVAS_H / 2;
+updateCanvasTransform();
+
+function smoothFocusCamera(targetCX, targetCY) {
+  const targetCamX = window.innerWidth / 2 - targetCX * camScale;
+  const targetCamY = window.innerHeight / 2 - targetCY * camScale;
+  let t = 0;
+  const startX = camX, startY = camY;
+  function step() {
+    t = Math.min(t + 0.018, 1);
+    const e = 1 - Math.pow(1 - t, 3);
+    camX = startX + (targetCamX - startX) * e;
+    camY = startY + (targetCamY - startY) * e;
+    updateCanvasTransform();
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ═══════════════════════════════════════════════════════════
+//  FILE-SPREAD ALIGNMENT — diagonal cascade sorted by axis score
+// ═══════════════════════════════════════════════════════════
+const CX = CANVAS_W / 2;
+const CY = CANVAS_H / 2;
+
+function calculateAlignedPositions() {
+  const hasX = activeAxes.x, hasY = activeAxes.y, hasZ = activeAxes.z;
+
+  // Sort by combined active-axis scores; tiebreak by Korean/English title (가나다/ABC)
+  const sorted = [...cards].sort((a, b) => {
+    let sa = 0, sb = 0;
+    if (hasX) { sa += a.x; sb += b.x; }
+    if (hasY) { sa += a.y; sb += b.y; }
+    if (hasZ) { sa += a.z; sb += b.z; }
+    if (sa !== sb) return sa - sb;
+    return a.data.title.localeCompare(b.data.title, ['ko', 'en'], { sensitivity: 'base' });
+  });
+
+  // Step size: large enough that each card is clearly visible (≈50% exposed)
+  // Direction varies by active axis to match its visual direction
+  // X: mostly horizontal →    Y: mostly vertical ↓
+  // Z: lower-left ↙ (matches SVG Z axis)    multi: balanced ↘
+  let stepX, stepY;
+  if      (hasX && !hasY && !hasZ) { stepX =  70; stepY = 18; }
+  else if (!hasX &&  hasY && !hasZ) { stepX =  15; stepY = 55; }
+  else if (!hasX && !hasY &&  hasZ) { stepX = -45; stepY = 32; }
+  else                               { stepX =  55; stepY = 42; }
+
+  const n = sorted.length;
+  // Center the whole diagonal spread around canvas center
+  const startX = CX - ((n - 1) * stepX) / 2 - CARD_W  / 2;
+  const startY = CY - ((n - 1) * stepY) / 2 - CARD_H / 2;
+
+  const positions = {};
+  sorted.forEach((card, i) => {
+    positions[card.id] = {
+      x: startX + i * stepX,
+      y: startY + i * stepY,
+      zDepth: card.z,
+      stackIndex: i        // z-index order: higher = in front
+    };
+  });
+
+  return positions;
+}
+
+function applyAlignmentFromActive() {
+  const anyActive = activeAxes.x || activeAxes.y || activeAxes.z;
+  if (!anyActive) { resetFloat(); return; }
+
+  currentMode = 'align';
+  document.getElementById('btn-split').classList.remove('active');
+  const positions = calculateAlignedPositions();
+
+  cards.forEach(card => {
+    const pos = positions[card.id];
+    if (!pos) return;
+    card.targetX          = pos.x;
+    card.targetY          = pos.y;
+    card.targetZDepth     = pos.zDepth;
+    card.targetStackIndex = pos.stackIndex;
+  });
+
+  // Smooth camera to midpoint of the spread
+  let sx = 0, sy = 0, n = 0;
+  cards.forEach(c => {
+    if (c.targetX != null) { sx += c.targetX + CARD_W / 2; sy += c.targetY + CARD_H / 2; n++; }
+  });
+  if (n) smoothFocusCamera(sx / n, sy / n);
+
+  const label = ['x','y','z'].filter(a => activeAxes[a]).map(a => a.toUpperCase()).join('+');
+  document.getElementById('hud-mode').textContent = `Sort ${label}`;
+}
+
+function resetFloat() {
+  currentMode = 'float';
+  cards.forEach(card => {
+    card.targetX = null;
+    card.targetY = null;
+    card.targetZDepth = null;
+    card.targetStackIndex = null;
+  });
+  document.getElementById('hud-mode').textContent = 'Free Float';
+  document.getElementById('btn-split').classList.remove('active');
+}
+
+// ── SIDE A | B SPLIT ─────────────────────────────────────────
+function calculateSplitPositions() {
+  const sideA = cards.filter(c => / A\d/.test(c.data.side))
+    .sort((a, b) => a.data.side.localeCompare(b.data.side) || a.id - b.id);
+  const sideB = cards.filter(c => / B\d/.test(c.data.side))
+    .sort((a, b) => a.data.side.localeCompare(b.data.side) || a.id - b.id);
+
+  const COLS = 3;
+  const stepX = CARD_W + 14;
+  const stepY = CARD_H + 18;
+  const divGap = 140;
+
+  const rowsA = Math.ceil(sideA.length / COLS);
+  const rowsB = Math.ceil(sideB.length / COLS);
+
+  const totalWidth = COLS * stepX + divGap + COLS * stepX;
+  const totalHeight = Math.max(rowsA, rowsB) * stepY;
+  const startX = CX - totalWidth / 2;
+  const startY = CY - totalHeight / 2;
+
+  const positions = {};
+
+  sideA.forEach((card, i) => {
+    const col = i % COLS;
+    const row = Math.floor(i / COLS);
+    positions[card.id] = { x: startX + col * stepX, y: startY + row * stepY, stackIndex: i };
+  });
+
+  const startBX = startX + COLS * stepX + divGap;
+  sideB.forEach((card, i) => {
+    const col = i % COLS;
+    const row = Math.floor(i / COLS);
+    positions[card.id] = { x: startBX + col * stepX, y: startY + row * stepY, stackIndex: sideA.length + i };
+  });
+
+  return positions;
+}
+
+function applySplitMode() {
+  currentMode = 'split';
+  activeAxes.x = false; activeAxes.y = false; activeAxes.z = false;
+  updateAxisVisuals();
+
+  const positions = calculateSplitPositions();
+  cards.forEach(card => {
+    const pos = positions[card.id];
+    if (!pos) return;
+    card.targetX = pos.x;
+    card.targetY = pos.y;
+    card.targetZDepth = null;
+    card.targetStackIndex = pos.stackIndex;
+  });
+
+  // Focus on the top of the arranged layout instead of the canvas center
+  const sideA = cards.filter(c => / A\d/.test(c.data.side));
+  const sideB = cards.filter(c => / B\d/.test(c.data.side));
+  const totalHeight = Math.max(Math.ceil(sideA.length / 3), Math.ceil(sideB.length / 3)) * (CARD_H + 18);
+  const topY = CY - totalHeight / 2 + CARD_H / 2;
+  smoothFocusCamera(CX, topY);
+
+  document.getElementById('hud-mode').textContent = 'Side A | B';
+}
+
+document.getElementById('btn-split').addEventListener('click', () => {
+  if (currentMode === 'split') {
+    resetFloat();
+  } else {
+    document.getElementById('btn-split').classList.add('active');
+    applySplitMode();
+  }
+});
+
+// ═══════════════════════════════════════════════════════════
+//  ANIMATION LOOP
+// ═══════════════════════════════════════════════════════════
+function loop() {
+  tick++;
+
+  if (currentMode === 'float') {
+    // Float animation
+    cards.forEach(card => {
+      card.posX += card.vx + Math.sin(tick * 0.002 + card.phase) * 0.3;
+      card.posY += card.vy + Math.cos(tick * 0.003 + card.phase * 1.3) * 0.3;
+
+      // Wrap
+      if (card.posX < -200) card.posX = CANVAS_W;
+      if (card.posX > CANVAS_W) card.posX = -200;
+      if (card.posY < -200) card.posY = CANVAS_H;
+      if (card.posY > CANVAS_H) card.posY = -200;
+
+      // Depth oscillation
+      card.depth += card.vz;
+      if (Math.abs(card.depth) > 150) card.vz *= -1;
+      const scale = 0.82 + (card.depth + 150) / 1500;
+
+      card.el.style.transform = `translate3d(${card.posX}px,${card.posY}px,0) scale(${scale})`;
+      card.el.style.zIndex = Math.round(card.depth + 200);
+      card.el.style.opacity = '1';
+    });
+  } else {
+    // Alignment lerp — file-spread diagonal cascade
+    cards.forEach(card => {
+      if (card.targetX === null) return;
+      card.posX += (card.targetX - card.posX) * 0.07;
+      card.posY += (card.targetY - card.posY) * 0.07;
+
+      // Stack order: position in sorted line determines z-index (front = on top)
+      const si = card.targetStackIndex ?? 0;
+      // When Z active: scale + opacity depth cue on top of positional sort
+      card.el.style.transform = `translate3d(${card.posX}px,${card.posY}px,0)`;
+      card.el.style.zIndex   = si;
+      card.el.style.opacity  = '1';
+    });
+  }
+
+  // Inertia
+  if (!isDragging) {
+    camX += velX;
+    camY += velY;
+    velX *= 0.95;
+    velY *= 0.95;
+    if (Math.abs(velX) < 0.01) velX = 0;
+    if (Math.abs(velY) < 0.01) velY = 0;
+    if (velX !== 0 || velY !== 0) updateCanvasTransform();
+  }
+
+  animFrame = requestAnimationFrame(loop);
+}
+
+animFrame = requestAnimationFrame(loop);
+
+// ═══════════════════════════════════════════════════════════
+//  DRAG / PAN
+// ═══════════════════════════════════════════════════════════
+const viewport = document.getElementById('viewport');
+
+function onPointerDown(e) {
+  if (e.target.closest('.card') || e.target.closest('#axis-control') || e.target.closest('#modal-overlay')) return;
+  isDragging = true;
+  dragDist = 0;
+  const cx = e.touches ? e.touches[0].clientX : e.clientX;
+  const cy = e.touches ? e.touches[0].clientY : e.clientY;
+  dragStartX = cx;
+  dragStartY = cy;
+  dragLastX = cx;
+  dragLastY = cy;
+  velX = 0;
+  velY = 0;
+}
+
+function onPointerMove(e) {
+  if (!isDragging) return;
+  const cx = e.touches ? e.touches[0].clientX : e.clientX;
+  const cy = e.touches ? e.touches[0].clientY : e.clientY;
+  const dx = cx - dragLastX;
+  const dy = cy - dragLastY;
+  dragDist += Math.sqrt((cx - dragStartX) ** 2 + (cy - dragStartY) ** 2);
+  camX += dx;
+  camY += dy;
+  velX = dx;
+  velY = dy;
+  dragLastX = cx;
+  dragLastY = cy;
+  updateCanvasTransform();
+}
+
+function onPointerUp(e) {
+  isDragging = false;
+}
+
+viewport.addEventListener('mousedown', onPointerDown);
+window.addEventListener('mousemove', onPointerMove);
+window.addEventListener('mouseup', onPointerUp);
+viewport.addEventListener('touchstart', onPointerDown, { passive: true });
+window.addEventListener('touchmove', onPointerMove, { passive: true });
+window.addEventListener('touchend', onPointerUp);
+
+viewport.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+  const newScale = Math.max(0.1, Math.min(4.0, camScale * factor));
+  const ratio = newScale / camScale;
+  camX = e.clientX - (e.clientX - camX) * ratio;
+  camY = e.clientY - (e.clientY - camY) * ratio;
+  camScale = newScale;
+  updateCanvasTransform();
+}, { passive: false });
+
+// Track drag distance for cards too
+viewport.addEventListener('mousedown', (e) => { dragDist = 0; });
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) return;
+});
+
+// ═══════════════════════════════════════════════════════════
+//  AXIS CONTROLS — toggle & accumulate
+// ═══════════════════════════════════════════════════════════
+function updateAxisVisuals() {
+  const anyActive = activeAxes.x || activeAxes.y || activeAxes.z;
+
+  // Label text colors
+  ['x','y','z'].forEach(a => {
+    const el = document.getElementById('btn-' + a);
+    if (el) el.classList.toggle('active', activeAxes[a]);
+  });
+  const floatBtn = document.getElementById('btn-float');
+  if (floatBtn) floatBtn.classList.toggle('active', !anyActive);
+
+  // SVG line colors: active = #000, inactive = #dedede
+  const svg = document.getElementById('axis-svg');
+  if (!svg) return;
+  const lines = svg.querySelectorAll('line, polyline');
+  const circle = svg.querySelector('circle');
+  const axisLineMap = { x: [0,1], y: [2,3], z: [4,5] };
+  lines.forEach(l => l.setAttribute('stroke', '#dedede'));
+  if (circle) circle.setAttribute('fill', '#dedede');
+  ['x','y','z'].forEach(a => {
+    if (activeAxes[a]) {
+      axisLineMap[a].forEach(i => {
+        if (lines[i]) lines[i].setAttribute('stroke', '#000');
+      });
+    }
+  });
+}
+
+['x','y','z'].forEach(axis => {
+  document.getElementById('btn-' + axis).addEventListener('click', () => {
+    activeAxes[axis] = !activeAxes[axis];  // toggle
+    updateAxisVisuals();
+    applyAlignmentFromActive();
+  });
+});
+
+document.getElementById('btn-float').addEventListener('click', () => {
+  activeAxes.x = false; activeAxes.y = false; activeAxes.z = false;
+  updateAxisVisuals();
+  resetFloat();
+});
+
+// ═══════════════════════════════════════════════════════════
+//  MODAL
+// ═══════════════════════════════════════════════════════════
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+
+// ── English translations ──────────────────────────────────────
+const sideEN = {
+  'A1': 'A1. Macro Constraints (Nature / Physics)',
+  'A2': 'A2. Social Contract (Systems / Standards)',
+  'A3': 'A3. Micro Play (Art / Games / Routine)',
+  'B1': 'B1. Micro Escape (Error / Mistake / Deviation)',
+  'B2': 'B2. Social Fracture (Conflict / Distortion / Error)',
+  'B3': 'B3. Macro Chaos (Entropy / Nature)',
+};
+
+const titleEN = {
+  1:'Orbital Mechanics', 2:'Fibonacci & Fractal', 3:'Crystal Lattice',
+  4:'Prism Dispersion', 5:'Turing Patterns', 6:'Bénard Cells',
+  7:'Columnar Jointing', 8:'Lichtenberg Figure', 9:'Chladni Figures',
+  10:'Phyllotaxis', 11:'Spiral Galaxy Systems', 12:'Coriolis Vector Mapping',
+  13:'Voronoi Diagram', 14:"Kundt's Tube Standing Waves", 15:'Dune Ripple Patterns',
+  16:'Meniscus Curve', 17:'Pi Distribution Graphics', 18:'Arundo donax',
+  19:"Newton's Laws of Motion", 20:'Second Law of Thermodynamics',
+  21:"Humboldt's Isotherms", 22:"Descartes' Laws of Impact", 23:'Expansion of Water',
+  24:'Doryphoros', 25:"Vesalius's Canonical Bodies", 26:'Measured Proportions',
+  27:'Rule of Saint Benedict', 28:'Ars et Usus', 29:'Diligence and Experience',
+  30:"Homer's Iliad", 31:'Regula Sancti Benedicti', 32:'Exceptions to Silence',
+  33:'Vigils Routine', 34:'Life of Christ', 35:'Lesbian Rule',
+  36:'Legal Precedents', 37:'Tea Ceremony Layout',
+  38:'Vexillography Specification', 39:'Munsell Color Tree',
+  40:'ISO Safety Pictograms', 41:'Musical Staff Notation', 42:'Grid System',
+  43:'Plimsoll Line', 44:'QR Code Specification', 45:'Schematic Circuit Symbols',
+  46:'Celestial Cartography', 47:'Architectural Blueprint Symbols',
+  48:'A4 Paper Ratio', 49:'Periodic Table Grid', 50:'Candlestick Charting',
+  51:'DIN Typeface Standard', 52:"Dürer's Polygon Construction",
+  53:'Counting Rods', 54:'Babylonian Mathematical Tablet',
+  55:'Pin Manufacture', 56:'Logarithm Workshop Division of Labor',
+  57:'Jacquard Card', 58:"Babbage's Engine Plans",
+  59:'Oulipo Lipogram', 60:"Sol LeWitt's Instructions",
+  61:'Go & Chess Notation', 62:'Islamic Arabesque', 63:'Zen Rock Garden Raking',
+  64:'Mandala Geometry', 65:'Sewing Pattern Drafting', 66:'Neo-Plasticism Rules',
+  67:'Bauhaus Color Sphere', 68:'Manga Layout Rules', 69:'Asanoha Pattern',
+  70:'Kerning & Tracking', 71:'French Formal Garden', 72:'Korean Flag Construction',
+  73:'Identity Guidelines', 74:"Schwarz's Costume",
+  75:'Machine for Retrieving Files', 76:'Map of Amsterdam',
+  77:"Hart's Orthographie", 78:'French Sumptuary Cookery',
+  79:'Beaked Shoes Law', 80:'Strasbourg Sumptuary Rules',
+  81:'Lace Width Restriction', 82:'Street Cleaning Ordinance',
+  83:'La Bise', 84:'Duden Orthography', 85:'English Spelling Rhyme',
+  86:'Look out below!',
+  87:'Justitia', 88:'Pandemic Grounding', 89:'Work-to-rule Strike',
+  90:'Sacrifice of Isaac', 91:'Presidential Pardon', 92:'Rule Vertigo',
+  94:'Prerogative',
+  96:'CMYK', 97:'CRT TV White Noise', 98:'JPEG Block Artifacts',
+  99:'Tape Stretch & Chew', 100:'3D Printing Spaghetti',
+  101:'Elliott-Fischer Machine Test', 102:'Blue Screen',
+  103:'Mars Climate Orbiter Crash', 104:'Miraculous Jumps',
+  105:'Graffiti Tagging', 106:'Psychedelic Poster',
+  107:'Soviet X-Ray Ribs Audio', 108:'CV Dazzle',
+  109:'Punk Ransom Note', 110:'Fortuna',
+};
+
+const galleryImage = {
+  1:'image/1.jpg', 2:'image/2.jpg', 3:'image/3.png', 4:'image/4.jpg',
+  5:'image/5.png', 6:'image/6.jpg', 7:'image/7.jpg', 8:'image/8.jpg',
+  9:'image/9.jpg', 10:'image/10.png', 11:'image/11.jpeg', 12:'image/12.jpg',
+  13:'image/13.png', 14:'image/14.png', 15:'image/15.jpeg', 16:'image/16.png',
+  17:'image/17.png', 18:'image/18.jpeg', 19:'image/19.jpeg',
+  21:'image/21.jpeg', 22:'image/22.jpeg', 23:'image/23.jpg',
+  24:'image/24.jpeg', 25:'image/25.jpeg', 26:'image/26.jpeg',
+  27:'image/27.jpeg', 28:'image/28.jpg', 29:'image/29.jpg', 30:'image/30.jpeg',
+  31:'image/31.jpeg', 32:'image/32.jpeg', 33:'image/33.jpeg', 34:'image/34.jpg',
+  35:'image/35.jpeg', 36:'image/36.jpg', 37:'image/37.jpg', 38:'image/38.png',
+  39:'image/39.png', 40:'image/40.jpg', 41:'image/41.jpeg', 42:'image/42.jpg',
+  43:'image/43.jpg', 44:'image/44.png', 45:'image/45.png', 46:'image/46.jpeg',
+  47:'image/47.png', 48:'image/48.png', 49:'image/49.png', 50:'image/50.png',
+  51:'image/51.png', 52:'image/52.jpeg', 53:'image/53.png', 54:'image/54.jpeg',
+  55:'image/55.jpeg', 56:'image/56.jpg', 57:'image/57.jpg', 58:'image/58.jpg',
+  59:'image/59.jpg', 60:'image/60.jpg', 61:'image/61.jpg', 62:'image/62.jpg',
+  63:'image/63.png', 64:'image/64.jpeg', 65:'image/65.png', 66:'image/66.jpg',
+  67:'image/67.jpg', 68:'image/68.jpg', 69:'image/69.png', 70:'image/70.jpg',
+  71:'image/71.jpeg', 72:'image/72.png', 73:'image/73.png', 74:'image/74.jpeg',
+  75:'image/75.jpeg', 76:'image/76.png', 77:'image/77.jpeg', 78:'image/78.jpg',
+  79:'image/79.jpg', 80:'image/80.jpg', 81:'image/81.jpg', 82:'image/82.jpg',
+  83:'image/83.jpg', 84:'image/84.jpeg', 85:'image/85.png', 86:'image/86.jpeg',
+  87:'image/87.jpeg', 88:'image/88.png', 89:'image/89.jpg', 90:'image/90.jpeg',
+  91:'image/91.jpeg', 92:'image/92.png', 94:'image/94.jpg',
+  96:'image/96.jpg', 97:'image/97.jpg', 98:'image/98.png', 99:'image/99.jpeg',
+  100:'image/100.jpeg', 101:'image/101.jpg', 102:'image/102.jpg', 103:'image/103.jpg',
+  104:'image/104.jpeg', 105:'image/105.jpeg', 106:'image/106.jpeg', 107:'image/107.png',
+  108:'image/108.jpg', 109:'image/109.jpg', 110:'image/110.png',
+};
+
+function openModal(data) {
+  document.getElementById('m-id').textContent = `#${String(data.id).padStart(3,'0')}`;
+  document.getElementById('m-title-en').textContent = titleEN[data.id] || '';
+
+  const imgEl = document.getElementById('lightbox-img');
+  const placeholder = document.getElementById('lightbox-placeholder');
+  if (data.image) {
+    imgEl.src = data.image;
+    imgEl.style.display = 'block';
+    placeholder.style.display = 'none';
+  } else {
+    imgEl.style.display = 'none';
+    imgEl.src = '';
+    placeholder.style.display = 'block';
+  }
+
+  modalOverlay.classList.add('active');
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ═══════════════════════════════════════════════════════════
+//  CARD DRAG DISTANCE TRACKING
+// ═══════════════════════════════════════════════════════════
+// Reset dragDist on any mousedown
+document.addEventListener('mousedown', () => { dragDist = 0; });
+document.addEventListener('touchstart', () => { dragDist = 0; }, { passive: true });
+
+// Track drag via document mousemove (separate from pan logic)
+let _mdx = 0, _mdy = 0, _mdown = false;
+document.addEventListener('mousedown', (e) => {
+  _mdx = e.clientX; _mdy = e.clientY; _mdown = true; dragDist = 0;
+});
+document.addEventListener('mousemove', (e) => {
+  if (!_mdown) return;
+  const dx = e.clientX - _mdx;
+  const dy = e.clientY - _mdy;
+  dragDist = Math.sqrt(dx*dx + dy*dy);
+});
+document.addEventListener('mouseup', () => { _mdown = false; });
+
+// ═══════════════════════════════════════════════════════════
+//  RULES DICTIONARY
+// ═══════════════════════════════════════════════════════════
+const dictData = [
+  {no:1,ko:'법률',en:'Law',cat:'1. 공적 제도와 법률적 규범',def:'국회의 의결을 거쳐 대통령이 공포한 법. 국가의 강제력을 수반하는 사회 규범이다.',src:'표준국어대사전'},
+  {no:2,ko:'헌법',en:'Constitution',cat:'1. 공적 제도와 법률적 규범',def:'국가의 통치 체제와 국민의 기본권 따위를 규정한 국가의 최고 기본법.',src:'표준국어대사전'},
+  {no:3,ko:'조례',en:'Ordinance',cat:'1. 공적 제도와 법률적 규범',def:'지방 자치 단체가 법령의 범위 안에서 지방 의회의 의결을 거쳐 제정하는 법.',src:'표준국어대사전'},
+  {no:4,ko:'시행령',en:'Enforcement Decree',cat:'1. 공적 제도와 법률적 규범',def:'법률을 시행하는 데 필요한 구체적 사항을 규정하기 위하여 대통령이 발하는 명령.',src:'법률용어사전'},
+  {no:5,ko:'의무',en:'Obligation',cat:'1. 공적 제도와 법률적 규범',def:'규범에 의하여 부과되는 법률상 또는 도덕상의 구속.',src:'표준국어대사전'},
+  {no:6,ko:'권리',en:'Right',cat:'1. 공적 제도와 법률적 규범',def:'어떤 이익을 얻거나 누리기 위하여 법이 승인하는 힘.',src:'표준국어대사전'},
+  {no:7,ko:'금지',en:'Prohibition',cat:'1. 공적 제도와 법률적 규범',def:'법령이나 명령 따위로 어떤 행위를 하지 못하도록 함.',src:'표준국어대사전'},
+  {no:8,ko:'허가',en:'Permission',cat:'1. 공적 제도와 법률적 규범',def:'법령에 의하여 일반적ㆍ상대적으로 금지되고 있는 행위를 특정한 경우에 해제하여, 적법하게 그 행위를 할 수 있게 하는 행정 처분.',src:'행정학사전'},
+  {no:9,ko:'면제',en:'Exemption',cat:'1. 공적 제도와 법률적 규범',def:'작위ㆍ부작위ㆍ급부 따위의 의무를 면하게 하여 주는 일.',src:'표준국어대사전'},
+  {no:10,ko:'제재',en:'Sanction',cat:'1. 공적 제도와 법률적 규범',def:'법이나 규정의 실효성을 확보하기 위하여, 그것을 위반하였을 때 처벌이나 불이익을 주는 일.',src:'사회학사전'},
+  {no:11,ko:'합법',en:'Legality',cat:'1. 공적 제도와 법률적 규범',def:'법령이나 규범에 알맞음.',src:'표준국어대사전'},
+  {no:12,ko:'불법',en:'Illegality',cat:'1. 공적 제도와 법률적 규범',def:'법에 어긋나거나 법을 어김.',src:'표준국어대사전'},
+  {no:13,ko:'위법',en:'Violation of law',cat:'1. 공적 제도와 법률적 규범',def:'법률이나 명령을 어김.',src:'표준국어대사전'},
+  {no:14,ko:'준수',en:'Compliance',cat:'1. 공적 제도와 법률적 규범',def:'규정, 규칙, 법률 따위를 모방하거나 따름.',src:'표준국어대사전'},
+  {no:15,ko:'이행',en:'Fulfillment',cat:'1. 공적 제도와 법률적 규범',def:'계약이나 약속 따위를 실제로 행함.',src:'표준국어대사전'},
+  {no:16,ko:'효력',en:'Validity',cat:'1. 공적 제도와 법률적 규범',def:'법률상이나 규칙상의 효능이나 작용의 힘.',src:'법률용어사전'},
+  {no:17,ko:'소멸',en:'Extinction',cat:'1. 공적 제도와 법률적 규범',def:'법률상 권리나 의무 따위의 효력이 없어짐.',src:'표준국어대사전'},
+  {no:18,ko:'성문법',en:'Statutory law',cat:'1. 공적 제도와 법률적 규범',def:'문자로 기록되고 일정한 절차에 따라 제정된 법률.',src:'표준국어대사전'},
+  {no:19,ko:'계약',en:'Contract',cat:'1. 공적 제도와 법률적 규범',def:'복수 당사자의 반대 방향의 의사 표시의 합치에 의하여 성립하는 법률 행위.',src:'민법사전'},
+  {no:20,ko:'가이드라인',en:'Guideline',cat:'1. 공적 제도와 법률적 규범',def:'정부나 단체 등이 행동이나 정책의 지침으로 삼기 위하여 제시한 공식적인 기준.',src:'시사상식사전'},
+  {no:21,ko:'불문율',en:'Unwritten law',cat:'2. 사회적 관습과 자율적 규범',def:'문서의 형식으로 표현되지 않았으나 사회 구성원들 사이에서 묵시적으로 인정되어 내려오는 법이나 규칙.',src:'표준국어대사전'},
+  {no:22,ko:'인습',en:'Long-standing evil custom',cat:'2. 사회적 관습과 자율적 규범',def:'이전부터 내려오는 습관 중에서 버려야 할 악습.',src:'표준국어대사전'},
+  {no:23,ko:'미풍양속',en:'Beautiful customs',cat:'2. 사회적 관습과 자율적 규범',def:'아름답고 좋은 풍속과 교양 있는 풍습.',src:'표준국어대사전'},
+  {no:24,ko:'예의범절',en:'Etiquette',cat:'2. 사회적 관습과 자율적 규범',def:'일상생활에서 지켜야 할 바른 태도와 행동 양식.',src:'표준국어대사전'},
+  {no:25,ko:'공중도덕',en:'Public morals',cat:'2. 사회적 관습과 자율적 규범',def:'사회 구성원으로서 공공장소에서 지켜야 할 도덕과 질서.',src:'표준국어대사전'},
+  {no:26,ko:'상식',en:'Common sense',cat:'2. 사회적 관습과 자율적 규범',def:'사람들이 보통 알고 있거나 알아야 하는 일반적인 지식과 판단력.',src:'표준국어대사전'},
+  {no:27,ko:'한도',en:'Limit',cat:'2. 사회적 관습과 자율적 규범',def:'그 이상을 넘지 못하도록 정해진 정도나 한계.',src:'표준국어대사전'},
+  {no:28,ko:'암묵적 동의',en:'Tacit consent',cat:'2. 사회적 관습과 자율적 규범',def:'말이나 글로 직접 표현하지는 않았으나, 행동이나 태도로 은연중에 동의하는 일.',src:'사회학사전'},
+  {no:29,ko:'도리',en:'Duty',cat:'2. 사회적 관습과 자율적 규범',def:'사람으로서 마땅히 해야 할 바른 길이나 일의 이치.',src:'표준국어대사전'},
+  {no:30,ko:'명분',en:'Justification',cat:'2. 사회적 관습과 자율적 규범',def:'일을 꾀할 때 내세우는 겉치레 논리나 정당한 이유.',src:'표준국어대사전'},
+  {no:31,ko:'신의성실',en:'Good faith',cat:'2. 사회적 관습과 자율적 규범',def:'상대방의 신뢰를 배반하지 않도록 성의를 가지고 행동해야 한다는 법 원칙.',src:'민법사전'},
+  {no:32,ko:'신뢰',en:'Trust',cat:'2. 사회적 관습과 자율적 규범',def:'굳게 믿고 의지함.',src:'표준국어대사전'},
+  {no:33,ko:'약속',en:'Promise',cat:'2. 사회적 관습과 자율적 규범',def:'다른 사람과 앞으로의 일을 어떻게 하기로 미리 정함. 또는 그렇게 정한 내용.',src:'표준국어대사전'},
+  {no:34,ko:'공정',en:'Fairness',cat:'2. 사회적 관습과 자율적 규범',def:'공평하고 올바름.',src:'표준국어대사전'},
+  {no:35,ko:'정의',en:'Justice',cat:'2. 사회적 관습과 자율적 규범',def:'사회를 구성하고 유지하는 공평하고 올바른 도리.',src:'철학사전'},
+  {no:36,ko:'공익',en:'Public interest',cat:'2. 사회적 관습과 자율적 규범',def:'사회 전체의 이익이나 공공의 복리.',src:'표준국어대사전'},
+  {no:37,ko:'상부상조',en:'Mutual help',cat:'2. 사회적 관습과 자율적 규범',def:'서로서로 도움을 주고받음.',src:'표준국어대사전'},
+  {no:38,ko:'연대',en:'Solidarity',cat:'2. 사회적 관습과 자율적 규범',def:'한 덩어리로 서로 연결되어 있거나 공통의 목표를 위해 결속함.',src:'사회학사전'},
+  {no:39,ko:'책무',en:'Accountability',cat:'2. 사회적 관습과 자율적 규범',def:'맡은 바 임무와 도덕적 책임.',src:'표준국어대사전'},
+  {no:40,ko:'시민의식',en:'Civic consciousness',cat:'2. 사회적 관습과 자율적 규범',def:'민주 사회의 구성원으로서 요구되는 권리와 의무에 대한 자각.',src:'사회학사전'},
+  {no:41,ko:'사칙',en:'Company regulations',cat:'3. 조직의 기강과 관리 체계',def:'회사 내부의 질서 유지와 업무 처리를 위해 정해 놓은 규칙.',src:'표준국어대사전'},
+  {no:42,ko:'학칙',en:'School regulations',cat:'3. 조직의 기강과 관리 체계',def:'학교의 교육 목적을 달성하기 위하여 정해 놓은 규칙.',src:'표준국어대사전'},
+  {no:43,ko:'내규',en:'Internal regulations',cat:'3. 조직의 기강과 관리 체계',def:'어떤 단체나 기관 내부에서만 적용하기로 정한 규칙.',src:'표준국어대사전'},
+  {no:44,ko:'위계',en:'Hierarchy',cat:'3. 조직의 기강과 관리 체계',def:'조직이나 집단 내에서 지위나 직무에 따라 나누어진 계층적 질서.',src:'행정학사전'},
+  {no:45,ko:'직제',en:'Organizational structure',cat:'3. 조직의 기강과 관리 체계',def:'직무의 종류와 분담, 책임의 한계 따위를 규정한 조직 체제.',src:'표준국어대사전'},
+  {no:46,ko:'서열',en:'Rank',cat:'3. 조직의 기강과 관리 체계',def:'일정한 기준에 따라 나열된 순서나 위치.',src:'표준국어대사전'},
+  {no:47,ko:'연공서열',en:'Seniority system',cat:'3. 조직의 기강과 관리 체계',def:'근속 연수나 나이가 많아짐에 따라 조직 내의 지위나 임금이 올라가는 체제.',src:'경영학사전'},
+  {no:48,ko:'서약',en:'Pledge',cat:'3. 조직의 기강과 관리 체계',def:'맹세하고 약속함. 또는 그런 내용.',src:'표준국어대사전'},
+  {no:49,ko:'규탄',en:'Censure',cat:'3. 조직의 기강과 관리 체계',def:'잘못이나 죄를 들추어내어 엄하게 꾸짖음.',src:'표준국어대사전'},
+  {no:50,ko:'징계',en:'Disciplinary action',cat:'3. 조직의 기강과 관리 체계',def:'부정이나 부당한 행위에 대하여 제재를 가함.',src:'표준국어대사전'},
+  {no:51,ko:'파면',en:'Dismissal',cat:'3. 조직의 기강과 관리 체계',def:'잘못을 저지른 사람의 직위를 강제로 박탈하여 내쫓음.',src:'표준국어대사전'},
+  {no:52,ko:'정직',en:'Suspension',cat:'3. 조직의 기강과 관리 체계',def:'일정 기간 동안 직무 수행을 정지시키는 징계 처분.',src:'표준국어대사전'},
+  {no:53,ko:'감봉',en:'Salary reduction',cat:'3. 조직의 기강과 관리 체계',def:'징계의 하나로, 일정 기간 동안 임금을 줄여서 지급함.',src:'표준국어대사전'},
+  {no:54,ko:'견책',en:'Reprimand',cat:'3. 조직의 기강과 관리 체계',def:'직무상의 과실이나 규율 위반에 대하여 시정을 요구하고 훈계하는 가벼운 징계 처분.',src:'표준국어대사전'},
+  {no:55,ko:'제명',en:'Expulsion',cat:'3. 조직의 기강과 관리 체계',def:'단체나 조직에서 회원의 자격을 박탈하여 내쫓음.',src:'표준국어대사전'},
+  {no:56,ko:'자격',en:'Qualification',cat:'3. 조직의 기강과 관리 체계',def:'어떤 신분이나 지위를 가지거나 일정한 일을 하는 데 필요한 조건이나 능력.',src:'표준국어대사전'},
+  {no:57,ko:'권한',en:'Authority',cat:'3. 조직의 기강과 관리 체계',def:'제도나 직책에 따라 합법적으로 주어진 행사력이나 지배력.',src:'행정학사전'},
+  {no:58,ko:'감사',en:'Audit',cat:'3. 조직의 기강과 관리 체계',def:'규정이나 예산이 적절하게 집행되었는지 조사하고 확인하는 일.',src:'회계학사전'},
+  {no:59,ko:'시정명령',en:'Corrective order',cat:'3. 조직의 기강과 관리 체계',def:'위법하거나 부당한 행위를 고치도록 행정 기관이 내리는 명령.',src:'법률용어사전'},
+  {no:60,ko:'인사고과',en:'Personnel evaluation',cat:'3. 조직의 기강과 관리 체계',def:'조직 구성원의 능력과 업적을 객과적으로 평가하는 제도.',src:'경영학사전'},
+  {no:61,ko:'법칙',en:'Law',cat:'4. 과학·기술 및 데이터 시스템',def:'자연 현상이나 사회 현상에서 일관되게 나타나는 원인과 결과의 필연적 관계.',src:'과학사전'},
+  {no:62,ko:'공식',en:'Formula',cat:'4. 과학·기술 및 데이터 시스템',def:'수학이나 과학에서 어떤 관계나 법칙을 문자와 기호로 나타낸 식.',src:'수학사전'},
+  {no:63,ko:'정리',en:'Theorem',cat:'4. 과학·기술 및 데이터 시스템',def:'증명을 통해 진리임이 밝혀진 명제. 다른 명제를 증명하는 기초가 된다.',src:'수학사전'},
+  {no:64,ko:'가설',en:'Hypothesis',cat:'4. 과학·기술 및 데이터 시스템',def:'어떤 현상을 설명하기 위해 임시로 세운 가정. 검증을 거쳐 법칙으로 확립된다.',src:'과학사전'},
+  {no:65,ko:'패러다임',en:'Paradigm',cat:'4. 과학·기술 및 데이터 시스템',def:'한 시대의 학문이나 사회를 지배하는 이론적 틀이나 체계.',src:'토마스 쿤, 과학혁명의 구조'},
+  {no:66,ko:'알고리즘',en:'Algorithm',cat:'4. 과학·기술 및 데이터 시스템',def:'어떤 문제를 해결하기 위하여 정해진 일련의 절차나 공식.',src:'컴퓨터학사전'},
+  {no:67,ko:'코드',en:'Code',cat:'4. 과학·기술 및 데이터 시스템',def:'컴퓨터가 이해할 수 있도록 규격화된 명령어나 기호 체계.',src:'IT용어사전'},
+  {no:68,ko:'변수',en:'Variable',cat:'4. 과학·기술 및 데이터 시스템',def:'어떤 조건에 따라 변할 수 있는 수나 요인.',src:'수학사전'},
+  {no:69,ko:'상수',en:'Constant',cat:'4. 과학·기술 및 데이터 시스템',def:'변하지 않고 고정된 값을 가지는 수나 요인.',src:'수학사전'},
+  {no:70,ko:'매개변수',en:'Parameter',cat:'4. 과학·기술 및 데이터 시스템',def:'두 개 이상의 변수 사이의 함수 관계를 정하기 위해 사용하는 보조 변수.',src:'IT용어사전'},
+  {no:71,ko:'피드백',en:'Feedback',cat:'4. 과학·기술 및 데이터 시스템',def:'출력된 결과를 다시 입력 측에 보내어 원인 행동을 조정하게 하는 시스템 제어 방식.',src:'시스템공학사전'},
+  {no:72,ko:'루프',en:'Loop',cat:'4. 과학·기술 및 데이터 시스템',def:'시스템이나 프로그램에서 특정 조건이 만족될 때까지 반복되는 순환 구조.',src:'컴퓨터학사전'},
+  {no:73,ko:'필터',en:'Filter',cat:'4. 과학·기술 및 데이터 시스템',def:'특정 데이터나 신호만을 골라내고 나머지는 걸러내는 장치나 프로그램.',src:'IT용어사전'},
+  {no:74,ko:'동기화',en:'Synchronization',cat:'4. 과학·기술 및 데이터 시스템',def:'두 개 이상의 시스템이나 데이터의 상태를 일치시키는 과정.',src:'정보통신용어사전'},
+  {no:75,ko:'비동기',en:'Asynchrony',cat:'4. 과학·기술 및 데이터 시스템',def:'사건의 발생이나 데이터의 전송이 일정한 시간적 규칙 없이 독립적으로 일어나는 상태.',src:'정보통신용어사전'},
+  {no:76,ko:'디버깅',en:'Debugging',cat:'4. 과학·기술 및 데이터 시스템',def:'프로그램의 오류나 오작동 원인을 찾아내어 수정하는 작업.',src:'컴퓨터학사전'},
+  {no:77,ko:'컴파일',en:'Compilation',cat:'4. 과학·기술 및 데이터 시스템',def:'사람이 작성한 프로그래밍 언어를 컴퓨터가 이해할 수 있는 기계어로 번역하는 과정.',src:'IT용어사전'},
+  {no:78,ko:'인터페이스',en:'Interface',cat:'4. 과학·기술 및 데이터 시스템',def:'두 개의 시스템이나 장치, 혹은 인간과 기계가 상호작용할 수 있도록 연결하는 경계면.',src:'정보통신기술용어해설'},
+  {no:79,ko:'로그',en:'Log',cat:'4. 과학·기술 및 데이터 시스템',def:'시스템의 작동 상태나 사용 기록을 시간 순서대로 기록한 데이터.',src:'컴퓨터학사전'},
+  {no:80,ko:'데이터베이스',en:'Database',cat:'4. 과학·기술 및 데이터 시스템',def:'여러 사람이나 프로그램이 공유하여 사용할 수 있도록 통합하여 관리하는 데이터의 집합체.',src:'IT용어사전'},
+  {no:81,ko:'필연',en:'Necessity',cat:'5. 철학·미학 및 변칙과 예외',def:'사물의 발전이나 사건의 발생이 우연이 아니고 인과법칙에 따라 반드시 그렇게 될 수밖에 없는 상태.',src:'철학사전'},
+  {no:82,ko:'우연',en:'Contingency',cat:'5. 철학·미학 및 변칙과 예외',def:'인과관계가 불분명하여 예측할 수 없게 일어나는 현상.',src:'철학사전'},
+  {no:83,ko:'인과율',en:'Causality',cat:'5. 철학·미학 및 변칙과 예외',def:'모든 현상에는 반드시 그 원인이 있고, 원인이 없으면 결과도 없다는 법칙.',src:'철학사전'},
+  {no:84,ko:'이성',en:'Reason',cat:'5. 철학·미학 및 변칙과 예외',def:'개념적으로 사유하고 논리적으로 판단하며 사물의 이치를 깨닫는 인간의 능력.',src:'철학사전'},
+  {no:85,ko:'로고스',en:'Logos',cat:'5. 철학·미학 및 변칙과 예외',def:'우주와 인간 사회를 지배하는 보편적인 법칙이자 이성.',src:'그리스 철학사전'},
+  {no:86,ko:'코스모스',en:'Cosmos',cat:'5. 철학·미학 및 변칙과 예외',def:'혼돈과 대립되는 개념으로, 질서와 조화가 있는 우주 체계.',src:'그리스 철학사전'},
+  {no:87,ko:'카오스',en:'Chaos',cat:'5. 철학·미학 및 변칙과 예외',def:'우주가 형성되기 전의 천지 혼돈 상태, 또는 질서가 없는 무정형의 상태.',src:'그리스 철학사전'},
+  {no:88,ko:'엔트로피',en:'Entropy',cat:'5. 철학·미학 및 변칙과 예외',def:'시스템 내부의 무질서도를 나타내는 물리량. 자연현상은 엔트로피가 증가하는 방향으로 진행된다.',src:'열역학사전'},
+  {no:89,ko:'항상성',en:'Homeostasis',cat:'5. 철학·미학 및 변칙과 예외',def:'생물체나 시스템이 외부 환경의 변화에 대응하여 내부 상태를 일정하게 유지하려는 성질.',src:'생물학사전'},
+  {no:90,ko:'구조주의',en:'Structuralism',cat:'5. 철학·미학 및 변칙과 예외',def:'사물의 본질을 개별적 요소가 아니라 요소들 간의 관계망(구조) 속에서 파악하려는 사상적 흐름.',src:'철학사전'},
+  {no:91,ko:'해체주의',en:'Deconstruction',cat:'5. 철학·미학 및 변칙과 예외',def:'고정된 이분법적 질서나 중심적 가치를 거부하고 전통적 체계를 비판적으로 해체하는 사상.',src:'자크 데리다'},
+  {no:92,ko:'파격',en:'Breaking formality',cat:'5. 철학·미학 및 변칙과 예외',def:'일정한 격식이나 관례를 깨뜨리고 예외를 만듦.',src:'표준국어대사전'},
+  {no:93,ko:'일탈',en:'Deviance',cat:'5. 철학·미학 및 변칙과 예외',def:'사회적 규범이나 기대에서 벗어나는 행동을 함.',src:'사회학사전'},
+  {no:94,ko:'범법',en:'Transgression',cat:'5. 철학·미학 및 변칙과 예외',def:'법률이나 금지된 규칙을 범하여 넘어섬.',src:'표준국어대사전'},
+  {no:95,ko:'이단',en:'Heresy',cat:'5. 철학·미학 및 변칙과 예외',def:'정통적인 교리나 지배적인 사상 체계에서 벗어나 반대되는 주장이나 종파.',src:'종교학사전'},
+  {no:96,ko:'모순',en:'Contradiction',cat:'5. 철학·미학 및 변칙과 예외',def:'두 사실이 논리적으로 동시에 성립할 수 없어 서로 충돌하는 상태.',src:'논리학사전'},
+  {no:97,ko:'역설',en:'Paradox',cat:'5. 철학·미학 및 변칙과 예외',def:'표면적으로는 모순되어 보이나, 그 속에 깊은 진리를 담고 있는 표현이나 상황.',src:'논리학사전'},
+  {no:98,ko:'딜레마',en:'Dilemma',cat:'5. 철학·미학 및 변칙과 예외',def:'두 개의 선택지 중 어느 쪽을 선택해도 만족스럽지 못한 곤란한 상황.',src:'논리학사전'},
+  {no:99,ko:'아포리아',en:'Aporia',cat:'5. 철학·미학 및 변칙과 예외',def:'해결하기 어려운 절망적인 난관이나 논리적 막다른 골목.',src:'철학사전'},
+  {no:100,ko:'유토피아',en:'Utopia',cat:'5. 철학·미학 및 변칙과 예외',def:'현실에는 어디에도 존재하지 않는 이상적인 사회나 질서의 공간.',src:'토머스 모어'},
+  {no:101,ko:'규제',en:'Regulation',cat:'6. 경제·시장 및 행정 규제',def:'규칙이나 법률에 의하여 일정한 한도를 정하거나 그것을 넘지 못하게 막음.',src:'표준국어대사전'},
+  {no:102,ko:'담합',en:'Collusion',cat:'6. 경제·시장 및 행정 규제',def:'경쟁 관계에 있는 기업들이 서로 짜고 가격이나 생산량 등을 제한하여 시장의 공정한 규칙을 해치는 행위.',src:'경제학사전'},
+  {no:103,ko:'독점',en:'Monopoly',cat:'6. 경제·시장 및 행정 규제',def:'오직 하나의 공급자가 시장을 지배하여 가격과 유통의 흐름을 인위적으로 통제하는 상태.',src:'경제학사전'},
+  {no:104,ko:'관세',en:'Tariff',cat:'6. 경제·시장 및 행정 규제',def:'국경을 통과하는 물품에 대하여 법률이나 조약에 따라 부과하는 세금의 체계.',src:'표준국어대사전'},
+  {no:105,ko:'쿼터',en:'Quota',cat:'6. 경제·시장 및 행정 규제',def:'수입이나 생산 등에 대하여 정부가 허용하는 일정한 수량이나 비율의 제한선.',src:'시사상식사전'},
+  {no:106,ko:'금리',en:'Interest rate',cat:'6. 경제·시장 및 행정 규제',def:'빌려준 돈이나 예금에 붙는 이자의 비율. 중앙은행이 자금의 흐름을 통제하기 위해 조절하는 대표적인 경제적 지표.',src:'경제학사전'},
+  {no:107,ko:'면허',en:'License',cat:'6. 경제·시장 및 행정 규제',def:'특정한 행위나 사업을 할 수 있도록 법률에 의해 제한을 해제하고 자격을 부여하는 행정 처분.',src:'표준국어대사전'},
+  {no:108,ko:'특허',en:'Patent',cat:'6. 경제·시장 및 행정 규제',def:'특정 발명을 독점적으로 사용할 수 있도록 법적으로 보장하는 배타적 권리 규칙.',src:'법률용어사전'},
+  {no:109,ko:'과징금',en:'Penalty Fine',cat:'6. 경제·시장 및 행정 규제',def:'행정청이 법령 위반으로 얻은 부당 이득을 환수하고 제재하기 위해 부과하는 돈.',src:'행정학사전'},
+  {no:110,ko:'공시',en:'Public disclosure',cat:'6. 경제·시장 및 행정 규제',def:'기업이 주주와 투자자를 보호하기 위해 경영 상황을 투명하게 밝히도록 강제하는 제도적 규칙.',src:'회계학사전'},
+  {no:111,ko:'룰',en:'Rule',cat:'7. 게임·스포츠 및 예술적 제약',def:'경기나 게임 따위에서 공정한 승부를 위해 참가자들이 반드시 지켜야 하는 규칙.',src:'표준국어대사전'},
+  {no:112,ko:'반칙',en:'Foul',cat:'7. 게임·스포츠 및 예술적 제약',def:'경기 규칙이나 정해진 규율을 어김.',src:'표준국어대사전'},
+  {no:113,ko:'실격',en:'Disqualification',cat:'7. 게임·스포츠 및 예술적 제약',def:'규칙을 심각하게 위반하거나 자격 요건을 갖추지 못해 경기 권리를 잃음.',src:'표준국어대사전'},
+  {no:114,ko:'페널티',en:'Penalty',cat:'7. 게임·스포츠 및 예술적 제약',def:'규칙을 위반한 사람이나 팀에게 가해지는 벌칙이나 불이익.',src:'표준국어대사전'},
+  {no:115,ko:'장르',en:'Genre',cat:'7. 게임·스포츠 및 예술적 제약',def:'오랜 관습과 형식적 규칙에 의해 형성된 예술 작품의 일정한 양식이나 갈래.',src:'문학비평용어사전'},
+  {no:116,ko:'클리셰',en:'Cliche',cat:'7. 게임·스포츠 및 예술적 제약',def:'진부하거나 판에 박힌 예술적 표현이나 서사 전개의 고정된 규칙.',src:'문학비평용어사전'},
+  {no:117,ko:'운율',en:'Meter/Rhythm',cat:'7. 게임·스포츠 및 예술적 제약',def:'시나 음악에서 소리의 높낮이나 길고 짧음이 일정한 규칙으로 반복되는 형식적 상태.',src:'표준국어대사전'},
+  {no:118,ko:'화성학',en:'Harmonics',cat:'7. 게임·스포츠 및 예술적 제약',def:'음악에서 화음이 구성되고 진행되는 물리적·예술적 법칙을 연구하는 학문.',src:'음악사전'},
+  {no:119,ko:'원근법',en:'Perspective',cat:'7. 게임·스포츠 및 예술적 제약',def:'3차원의 대상을 2차원의 평면에 규칙적인 기하학적 원리로 표현하는 미술적 질서 기법.',src:'미술사전'},
+  {no:120,ko:'정형시',en:'Fixed-form verse',cat:'7. 게임·스포츠 및 예술적 제약',def:'행이나 연의 수, 글자 수 등이 일정한 형식적 규칙에 엄격히 얽매여 있는 시.',src:'표준국어대사전'},
+  {no:121,ko:'계율',en:'Commandment/Precept',cat:'8. 역사·종교 및 전통적 율법',def:'종교 교단에서 신도나 수행자가 도덕적 삶을 위해 지켜야 하는 자율적·타율적 행동 규칙.',src:'종교학사전'},
+  {no:122,ko:'교리',en:'Dogma/Doctrine',cat:'8. 역사·종교 및 전통적 율법',def:'종교나 학파에서 흔들리지 않는 진리로 믿고 따르는 공식적인 이론 체계.',src:'종교학사전'},
+  {no:123,ko:'율법',en:'Religious law',cat:'8. 역사·종교 및 전통적 율법',def:'유대교나 이슬람교 등에서 신의 계시에 의해 성립된 강제성을 띤 종교적·법적 규칙.',src:'종교학사전'},
+  {no:124,ko:'금욕',en:'Asceticism',cat:'8. 역사·종교 및 전통적 율법',def:'도덕적이나 종교적 목적을 달성하기 위해 육체적 욕망을 의도적·규칙적으로 억제하는 행위.',src:'표준국어대사전'},
+  {no:125,ko:'제례',en:'Ritual',cat:'8. 역사·종교 및 전통적 율법',def:'제사를 지내는 일정한 의식과 절차의 규범.',src:'표준국어대사전'},
+  {no:126,ko:'종교재판',en:'Inquisition',cat:'8. 역사·종교 및 전통적 율법',def:'중세 유럽 등에서 종교적 규칙과 교리를 위반한 이단을 심판하던 제도.',src:'역사사전'},
+  {no:127,ko:'국법',en:'National law',cat:'8. 역사·종교 및 전통적 율법',def:'한 국가의 주권에 의하여 제정되어 그 영토 내의 모든 이에게 적용되는 최상위 법률 체계.',src:'표준국어대사전'},
+  {no:128,ko:'조공',en:'Tribute',cat:'8. 역사·종교 및 전통적 율법',def:'과거 동아시아 외교 질서에서 종주국과 번국 사이에 정기적으로 예물을 바치며 군신 관계를 확인하던 규칙.',src:'역사사전'},
+  {no:129,ko:'반역',en:'Treason',cat:'8. 역사·종교 및 전통적 율법',def:'국가나 군주에 대한 최고의 규칙과 충성의 의무를 저버리고 적대 행위를 함.',src:'표준국어대사전'},
+  {no:130,ko:'사문난적',en:'Heresy in Confucianism',cat:'8. 역사·종교 및 전통적 율법',def:'유교의 교리와 사회적 질서를 어지럽히는 사람을 배척하던 조선 시대의 이단 규제 개념.',src:'한국민족문화대백과'},
+  {no:131,ko:'루틴',en:'Routine',cat:'9. 일상 행동 및 심리적 프레임',def:'특정한 효과를 내기 위해 매일 규칙적으로 반복하는 일의 통상적인 순서나 방법.',src:'표준국어대사전'},
+  {no:132,ko:'습관',en:'Habit',cat:'9. 일상 행동 및 심리적 프레임',def:'오랫동안 되풀이하는 과정에서 몸에 굳어진 개인적 행동 양식.',src:'표준국어대사전'},
+  {no:133,ko:'강박증',en:'OCD',cat:'9. 일상 행동 및 심리적 프레임',def:'자신만의 특정 규칙이나 통제 방식에 지나치게 집착하여 이를 수행하지 않으면 심한 불안을 느끼는 심리적 상태.',src:'심리학사전'},
+  {no:134,ko:'확증 편향',en:'Confirmation bias',cat:'9. 일상 행동 및 심리적 프레임',def:'자신의 신념이나 고정된 규칙에 부합하는 정보만 선택적으로 받아주는 인지적 왜곡 현상.',src:'심리학사전'},
+  {no:135,ko:'프레임',en:'Frame',cat:'9. 일상 행동 및 심리적 프레임',def:'사물을 인식하거나 판단할 때 작동하는 마음의 기준과 생각의 틀.',src:'심리학사전'},
+  {no:136,ko:'동조',en:'Conformity',cat:'9. 일상 행동 및 심리적 프레임',def:'집단의 압력이나 암묵적 규칙에 자신의 의견과 행동을 일치시키는 사회적 현상.',src:'사회심리학사전'},
+  {no:137,ko:'고정관념',en:'Stereotype',cat:'9. 일상 행동 및 심리적 프레임',def:'어떤 집단이나 사물에 대해 규칙적으로 고착화되어 쉽게 바꾸기 힘든 편견적 생각.',src:'표준국어대사전'},
+  {no:138,ko:'의례',en:'Ritual/Ceremony',cat:'9. 일상 행동 및 심리적 프레임',def:'정해진 규칙과 격식에 따라 치르는 사회적 행사나 반복적 행동 양식.',src:'사회학사전'},
+  {no:139,ko:'징벌',en:'Punishment',cat:'9. 일상 행동 및 심리적 프레임',def:'정해진 규칙이나 과실에 대해 제재를 가해 바로잡음.',src:'표준국어대사전'},
+  {no:140,ko:'보상',en:'Reward',cat:'9. 일상 행동 및 심리적 프레임',def:'规则을 성실히 준수하거나 우수한 성과를 냈을 때 주어지는 대가나 혜택.',src:'표준국어대사전'},
+  {no:141,ko:'문법',en:'Grammar',cat:'10. 언어·논리 및 구조적 규칙',def:'언어를 올바르고 소통 가능하게 사용하기 위해 지켜야 하는 구조적 규칙 체계.',src:'국어학사전'},
+  {no:142,ko:'맞춤법',en:'Orthography',cat:'10. 언어·논리 및 구조적 규칙',def:'어떤 언어를 글로 적을 때 지켜야 하는 사회적으로 정형화된 표기 규칙.',src:'표준국어대사전'},
+  {no:143,ko:'통사론',en:'Syntax',cat:'10. 언어·논리 및 구조적 규칙',def:'문장을 구성하는 단어들의 배열 법칙과 구조적 규칙을 연구하는 학문.',src:'언어학사전'},
+  {no:144,ko:'논리학',en:'Logic',cat:'10. 언어·논리 및 구조적 규칙',def:'바른 사유와 오류 없는 추론을 이끌어내는 법칙을 다루는 학문.',src:'철학사전'},
+  {no:145,ko:'타당성',en:'Validity',cat:'10. 언어·논리 및 구조적 규칙',def:'전제에서 결론을 도출하는 추론의 형식과 규칙이 논리적으로 올바른 성질.',src:'논리학사전'},
+  {no:146,ko:'귀납법',en:'Induction',cat:'10. 언어·논리 및 구조적 규칙',def:'개별적인 여러 사실들로부터 보편적인 법칙과 규칙을 이끌어내는 추론 방식.',src:'철학사전'},
+  {no:147,ko:'연역법',en:'Deduction',cat:'10. 언어·논리 및 구조적 규칙',def:'이미 증명된 보편적 원리나 규칙으로부터 개별적인 구체적 결론을 도출하는 추론 방식.',src:'철학사전'},
+  {no:148,ko:'전제',en:'Premise',cat:'10. 언어·논리 및 구조적 규칙',def:'어떤 결론을 이끌어내기 위한 바탕이 되는 논리적 규칙이나 기정사실.',src:'논리학사전'},
+  {no:149,ko:'오류',en:'Fallacy',cat:'10. 언어·논리 및 구조적 규칙',def:'논리적 규칙을 위반하여 범하게 되는 겉보기에만 옳고 실제로는 잘못된 추론.',src:'논리학사전'},
+  {no:150,ko:'구문',en:'Structure',cat:'10. 언어·논리 및 구조적 규칙',def:'글이나 문장이 구성되는 규칙적인 뼈대와 배치 구조.',src:'표준국어대사전'},
+  {no:151,ko:'그리드 시스템',en:'Grid System',cat:'16. 시각적 질서와 조형 법칙',def:'페이지나 화면을 가로세로로 나누어 격자무늬의 안내선을 만들고, 이에 맞춰 요소를 배치하는 레이아웃의 절대적인 규칙.',src:'디자인학사전'},
+  {no:152,ko:'타이포그래피',en:'Typography',cat:'16. 시각적 질서와 조형 법칙',def:'활자의 서체, 크기, 자간, 행간 등을 규칙적으로 조절하여 텍스트의 가독성과 시각적 질서를 높이는 디자인 기술.',src:'시각디자인사전'},
+  {no:153,ko:'정렬',en:'Alignment',cat:'16. 시각적 질서와 조형 법칙',def:'요소들을 왼쪽, 오른쪽, 중앙 등의 기준선에 맞춰 정돈함으로써 시각적 안정감과 연결성을 주는 규칙.',src:'디자인학사전'},
+  {no:154,ko:'대비',en:'Contrast',cat:'16. 시각적 질서와 조형 법칙',def:'크기, 색상, 형태의 뚜렷한 차이를 두어 시각적 위계를 만들고 주목성을 통제하는 법칙.',src:'조형예술사전'},
+  {no:155,ko:'통일성',en:'Unity',cat:'16. 시각적 질서와 조형 법칙',def:'서로 다른 디자인 요소들이 일관된 규칙이나 테마 안에서 조화를 이루어 하나의 완성된 유기체처럼 보이게 하는 상태.',src:'조형예술사전'},
+  {no:156,ko:'여백의 미',en:'Negative Space',cat:'16. 시각적 질서와 조형 법칙',def:'정보가 없는 빈 공간을 의도적·규칙적으로 배치하여, 오히려 핵심 요소에 시각적 숨통을 트여주고 집중도를 높이는 기법.',src:'미술사전'},
+  {no:157,ko:'비례',en:'Proportion',cat:'16. 시각적 질서와 조형 법칙',def:'요소들의 상대적인 크기 관계. 황금비(1:1.618)처럼 인간이 시각적으로 가장 안정적이고 아름답다고 느끼는 수학적 질서.',src:'디자인학사전'},
+  {no:158,ko:'대칭',en:'Symmetry',cat:'16. 시각적 질서와 조형 법칙',def:'중심축을 기준으로 양쪽의 형태나 무게감을 동일하게 배치하여 완벽한 균형과 정형화된 질서를 만드는 조형 법칙.',src:'조형예술사전'},
+  {no:159,ko:'율동감',en:'Rhythm',cat:'16. 시각적 질서와 조형 법칙',def:'유사한 시각적 요소(형태, 색상 등)를 일정하고 규칙적인 간격으로 반복하여 화면에 움직임과 활력을 주는 원리.',src:'조형예술사전'},
+  {no:160,ko:'게슈탈트 법칙',en:'Gestalt Laws',cat:'16. 시각적 질서와 조형 법칙',def:'인간이 개별 시각 요소를 따로 보지 않고, 하나의 조직화된 형태나 규칙적인 그룹으로 묶어서 인식한다는 인지 심리학적 시각 법칙.',src:'인지심리학사전'},
+  {no:161,ko:'어포던스',en:'Affordance',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'행동 유도성. 사용자가 고민 없이 직관적으로 행동하도록 형태적 단서(예: 누르고 싶게 생긴 버튼)를 제공하는 설계 원리.',src:'인지과학'},
+  {no:162,ko:'시각적 위계',en:'Visual Hierarchy',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'중요도에 따라 크기나 색상을 조절하여, 사용자의 시선이 디자이너가 의도한 순서대로 움직이도록 통제하는 기법.',src:'UX디자인사전'},
+  {no:163,ko:'일관성',en:'Consistency',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'시스템의 UI 요소나 작동 방식을 동일한 규칙으로 유지하여 사용자가 새로운 화면에서도 헤매지 않고 적응하도록 돕는 규범.',src:'UX디자인사전'},
+  {no:164,ko:'피츠의 법칙',en:'Fitts\'s Law',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'목표하는 버튼이나 아이콘에 도달하는 시간은 대상의 크기가 클수록, 거리가 가까울수록 짧아진다는 물리적 인터랙션 법칙.',src:'인간공학사전'},
+  {no:165,ko:'힉의 법칙',en:'Hick\'s Law',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'사람이 선택지 중에서 결정을 내리는 데 걸리는 시간은 선택지의 개수와 복잡성에 비례해 늘어난다는 디자인 제약 규칙.',src:'인간공학사전'},
+  {no:166,ko:'멘탈 모델',en:'Mental Model',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'사용자가 과거의 경험을 바탕으로 \'이 시스템은 이렇게 작동할 것\'이라고 머릿속에 미리 정의해 둔 고정된 행동 기대치.',src:'UX디자인사전'},
+  {no:167,ko:'사용성',en:'Usability',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'어떤 도구나 시스템을 사용할 때 목표를 얼마나 쉽고, 빠르고, 오류 없이 달성할 수 있는지를 나타내는 정량적 표준 지표.',src:'ISO 9241'},
+  {no:168,ko:'정보 구조',en:'Information Architecture',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'사용자가 원하는 정보를 물 흐르듯 찾을 수 있도록 복잡한 데이터들을 규칙적으로 분류하고 설계하는 논리적 뼈대.',src:'UX디자인사전'},
+  {no:169,ko:'접근성',en:'Accessibility',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'장애인이나 고령자 등 신체적 조건과 관계없이 모든 사람이 서비스 규칙을 평등하게 이용할 수 있도록 보장하는 설계 표준.',src:'웹접근성가이드라인'},
+  {no:170,ko:'다크 패턴',en:'Dark Pattern',cat:'17. 사용자 경험(UX) 및 인터랙션 규범',def:'사용자를 속여서 기업이 의도한 숨겨진 규칙(예: 교묘한 자동 결제)대로 행동하게 만드는 비윤리적인 인터페이스 설계 트릭.',src:'시사상식사전'},
+  {no:171,ko:'브랜드 가이드라인',en:'Brand Guidelines',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'로고, 색상, 서체 등을 사용할 때 브랜드의 정체성이 훼손되지 않도록 규정한 엄격한 시각 사용 규칙 문서.',src:'브랜드마케팅사전'},
+  {no:172,ko:'디자인 시스템',en:'Design System',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'컴포넌트와 디자인 규칙을 가이드라인과 코드로 표준화하여, 조직 전체가 일관된 제품을 만들 수 있도록 구축한 유기적 시스템.',src:'IT용어사전'},
+  {no:173,ko:'CI',en:'Corporate Identity',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'기업의 철학과 조형적 질서를 통합하여 대외적으로 보여주는 최상위 시각적 상징 규칙 체계.',src:'디자인학사전'},
+  {no:174,ko:'BI',en:'Brand Identity',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'특정 제품이나 서비스의 성격에 맞추어 시각적 요소를 정형화하고 로고, 패키지 등으로 차별화하는 브랜드 통제 시스템.',src:'디자인학사전'},
+  {no:175,ko:'스타일 가이드',en:'Style Guide',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'폰트의 크기, 여백, 컬러 코드(RGB, HEX 등) 등 구체적인 웹/앱 화면 스타일 규칙을 명문화한 지침서.',src:'디자인학사전'},
+  {no:176,ko:'컴포넌트',en:'Component',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'디자인 시스템 내에서 재사용이 가능하도록 독립적인 규칙과 형태로 모듈화된 최소 단위의 UI 요소(버튼, 인풋창 등).',src:'IT용어사전'},
+  {no:177,ko:'에셋',en:'Asset',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'디자인 가이드라인에 맞춰 제작되어 프로젝트에 즉시 투입할 수 있도록 규격화된 이미지, 아이콘 등의 시각 자료 파일.',src:'IT용어사전'},
+  {no:178,ko:'무드보드',en:'Moodboard',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'디자인의 본격적인 시작 전, 이미지나 컬러 칩을 모아 전체적인 시각적 방향성과 감성적 규칙을 조율해 보는 도구.',src:'디자인학사전'},
+  {no:179,ko:'미니멀리즘',en:'Minimalism',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'"적을수록 풍요롭다(Less is more)"는 규칙 하에, 본질을 흐리는 장식을 제약하고 단순함 속의 질서를 추구하는 사조.',src:'미술사전'},
+  {no:180,ko:'스큐어모피즘',en:'Skeuomorphism',cat:'18. 브랜드 시스템 및 디자인 가이드라인',def:'디지털 UI를 디자인할 때 사용자가 친숙함을 느끼도록 실제 현실 세계의 아날로그 질서와 질감을 그대로 모방하는 기법.',src:'UX디자인사전'},
+  {no:181,ko:'유니버설 디자인',en:'Universal Design',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'국적, 성별, 나이, 장애 유무와 상관없이 \'처음부터 모두를 위해\' 설계되어야 한다는 보편적이고 포용적인 디자인 규칙.',src:'보편적설계원칙'},
+  {no:182,ko:'인간공학',en:'Ergonomics',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'인간의 신체적 특징과 한계를 과학적으로 분석하여 가구나 제품을 사용할 때 몸에 무리가 가지 않도록 설계하는 질서 과학.',src:'인간공학사전'},
+  {no:183,ko:'목업',en:'Mock-up',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'제품 양산 전, 디자인의 치수와 규칙이 올바른지 외관 및 그립감을 확인하기 위해 실제 크기로 제작하는 실물 모형.',src:'생산관리학사전'},
+  {no:184,ko:'프로토타이핑',en:'Prototyping',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'사용자의 요구사항이나 인터랙션 규칙이 제대로 작동하는지 검증하기 위해 시제품을 빠르게 만들어보는 작업.',src:'UX디자인사전'},
+  {no:185,ko:'렌더링',en:'Rendering',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'2차원의 도면이나 3차원의 와이어프레임에 빛, 음영, 질감 등의 물리적 법칙을 계산하여 사실적 이미지로 완성하는 가상 공정.',src:'컴퓨터그래픽스학사전'},
+  {no:186,ko:'CFA',en:'Color, Materials, Finish',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'제품 디자인의 최종 감성 가치를 결정하는 색상(Color), 소재(Materials), 표면 마감(Finish)의 표준적 규칙 체계.',src:'제품디자인사전'},
+  {no:187,ko:'픽셀 퍼펙트',en:'Pixel Perfect',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'디지털 디자인 시, 요소의 크기와 위치가 소수점으로 깨지지 않고 픽셀(px) 단위의 격자 규칙에 칼같이 맞춘 상태.',src:'IT용어사전'},
+  {no:188,ko:'웨이파인딩',en:'Wayfinding',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'인간이 복잡한 공간(공항, 지하철 등)에서 길을 잃지 않고 목적지까지 직관적으로 도달할 수 있도록 안내 시스템을 구축하는 디자인 질서.',src:'공간디자인사전'},
+  {no:189,ko:'인클루시브 디자인',en:'Inclusive Design',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'특정 소외 계층의 제약 사항을 깊이 연구하여, 오히려 전체 대중을 만족시키는 혁신적인 솔루션을 도출하는 규칙 방법론.',src:'디자인학사전'},
+  {no:190,ko:'에코디자인',en:'Eco-design',cat:'19. 산업·환경 디자인 및 생산적 제약',def:'제품의 기획부터 폐기까지 전 과정에서 환경에 미치는 악영향을 최소화하도록 환경적 규제를 반영하는 설계 규칙.',src:'환경공학사전'},
+  {no:191,ko:'오토마티즘',en:'Automatism',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'이성의 통제와 미학적 규칙을 완전히 배제하고, 무의식의 흐름에 따라 손이 움직이는 대로 그리는 초현실주의 예술 방법론.',src:'미술사전'},
+  {no:192,ko:'바우하우스',en:'Bauhaus',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'"형태는 기능을 따른다"는 대원칙 하에 예술과 기술을 통합하여 현대 모던 디자인의 기하학적 질서와 표준을 정립한 사조.',src:'디자인사전'},
+  {no:193,ko:'레디메이드',en:'Ready-made',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'기성품을 그대로 예술 작품으로 제시함으로써, 예술 창작의 정형화된 규칙과 기성 관념을 해체한 개념 미술.',src:'마르셀 뒤샹'},
+  {no:194,ko:'안티디자인',en:'Anti-Design',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'기존의 엄격한 모더니즘적 규칙, 기능주의, 상업적 질서에 반기를 들고 파격적인 형태와 유희성을 추구한 디자인 운동.',src:'디자인사전'},
+  {no:195,ko:'키치',en:'Kitsch',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'정통 예술의 우아한 규칙을 모방했으나 천박하고 통속적인 가짜 예술, 혹은 이를 위트 있게 역이용하여 승화시킨 양식.',src:'미학사전'},
+  {no:196,ko:'더블 다이아몬드',en:'Double Diamond',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'확산\'과 \'수렴\'의 과정을 거치며 문제를 발견하고 정형화된 규칙으로 해결책을 도출해내는 디자인 씽킹 방법론 모델.',src:'영국디자인카운실'},
+  {no:197,ko:'애자일 디자인',en:'Agile Design',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'고정된 완벽한 계획에 얽매이지 않고, 짧은 주기마다 프로토타입을 만들어 테스트하며 규칙을 유연하게 수정하는 방법론.',src:'소프트웨어공학'},
+  {no:198,ko:'디자인 에이전시',en:'Design Agency',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'기업의 브랜드 규칙과 시각 자산을 전문적으로 진단하고 솔루션을 제공하는 외부 전문 디자인 조직 체계.',src:'경영학사전'},
+  {no:199,ko:'크리에이티브 디렉터',en:'Creative Director',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'디자인 프로젝트의 전체적인 시각 콘셉트, 방향성, 품질 기준을 최종 검수하고 통제하는 총괄 책임자.',src:'디자인학사전'},
+  {no:200,ko:'레거시',en:'Legacy',cat:'20. 예술적 제약과 현대 디자인 방법론',def:'새로운 시스템으로 전환할 때, 과거의 규칙이나 규격으로 만들어져 여전히 시스템 내부에 남아 발목을 잡는 제약 요인.',src:'IT용어사전'},
+  {no:201,ko:'모듈러 (Modulor)',en:'Modulor',cat:'21. 건축 및 공간적 한계와 질서',def:'건축가 르 코르뷔지에가 제안한 인간 신체 비례 기반의 황금분할 규칙 체계. 공간의 질서를 정립하는 표준 척도.',src:'건축학사전'},
+  {no:202,ko:'건폐율',en:'Building coverage ratio',cat:'21. 건축 및 공간적 한계와 질서',def:'대지면적에 대한 건축면적의 비율을 법적으로 제한하여, 도시 공간의 과밀화를 방지하고 최소한의 공지를 확보하는 규칙.',src:'부동산용어사전'},
+  {no:203,ko:'용적률',en:'Floor area ratio',cat:'21. 건축 및 공간적 한계와 질서',def:'대지면적에 대한 건축물 연면적의 비율을 제한하여 도시 인구 밀도와 공공 서비스 질서를 유지하는 규제 기준.',src:'도시계획학사전'},
+  {no:204,ko:'동선',en:'Circulation',cat:'21. 건축 및 공간적 한계와 질서',def:'사람이나 물건이 공간 내에서 움직이는 궤적을 예측하여, 혼란을 막고 효율성을 높이도록 짜인 규칙적 경로 체계.',src:'실내건축사전'},
+  {no:205,ko:'젠트리피케이션',en:'Gentrification',cat:'21. 건축 및 공간적 한계와 질서',def:'낙후된 구도심이 활성화되면서 임대료가 상승하여, 원주민들이 밀려나고 상업적 질서가 재편되는 현상.',src:'사회학사전'},
+  {no:206,ko:'지구단위계획',en:'District unit plan',cat:'21. 건축 및 공간적 한계와 질서',def:'도시의 일부 지역을 체계적이고 미관상 아름답게 관리하기 위해 건물의 높이, 용도, 형태 등을 세부적으로 제한하는 도시 규제 규칙.',src:'국토교통부'},
+  {no:207,ko:'가구',en:'Block',cat:'21. 건축 및 공간적 한계와 질서',def:'도로로 둘러싸인 도시 공간의 최소 단위 격자 구획. 도시 계획에서 형태적 통제와 질서의 기본 뼈대가 된다.',src:'도시계획학사전'},
+  {no:208,ko:'층고 제한',en:'Building height limits',cat:'21. 건축 및 공간적 한계와 질서',def:'일조권 확보, 문화재 보호, 혹은 도시 스카이라인의 질서를 위해 건물의 최대 높이를 법으로 제약하는 규칙.',src:'건축법사전'},
+  {no:209,ko:'파사드',en:'Facade',cat:'21. 건축 및 공간적 한계와 질서',def:'건축물의 정면 외벽 디자인. 도시의 가로 경관을 형성하며 공공의 시각적 질서와 규칙을 만족시켜야 하는 얼굴.',src:'건축학사전'},
+  {no:210,ko:'완충녹지',en:'Buffer greenbelt',cat:'21. 건축 및 공간적 한계와 질서',def:'공해, 소음 등의 재해 발생 우려가 있는 곳과 주거지역 사이에 설치하여 상호 침범을 막아주는 녹지 공간 규칙.',src:'토지이용용어사전'},
+  {no:211,ko:'알고리즘',en:'Algorithm',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'문제를 해결하거나 특정 결과를 도출하기 위해 컴퓨터가 따라야 하는 명확하고 순차적인 연산 규칙의 집합.',src:'컴퓨터학사전'},
+  {no:212,ko:'피드백 루프',en:'Feedback Loop',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'시스템의 출력이 다시 입력에 영향을 미쳐 스스로 규칙을 수정하거나 질서를 강화·약화해 나가는 순환 제어 메커니즘.',src:'시스템역학'},
+  {no:213,ko:'가이드라인',en:'Guideline',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'플랫폼(예: 유튜브, 앱스토어) 내에서 생태계 질서를 유지하기 위해 크리에이터나 개발자가 반드시 지켜야 하는 행동 제약.',src:'시사상식사전'},
+  {no:214,ko:'알고리즘 편향',en:'Algorithmic Bias',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'데이터를 학습하는 규칙 설계의 한계로 인해, 특정 집단에 대해 차별적이거나 불공정한 질서의 결과를 도출하는 현상.',src:'인공지능학사전'},
+  {no:215,ko:'API 표준',en:'API Standard',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'서로 다른 소프트웨어 프로그램들이 데이터를 주고받을 수 있도록 규격화해 둔 인터페이스 규칙 체계.',src:'IT용어사전'},
+  {no:216,ko:'섀도우 밴',en:'Shadowban',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'사용자 몰래 게시물의 노출을 인위적으로 제한하여, 생태계의 유해 규칙 위반자를 조용히 격리하는 플랫폼의 통제 방식.',src:'시사상식사전'},
+  {no:217,ko:'상호운용성',en:'Interoperability',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'성격이 다른 시스템들이 동일한 규칙과 표준 하에 정보를 교환하며 오차 없이 작동할 수 있는 연결 능력.',src:'정보통신기술용어해설'},
+  {no:218,ko:'검색엔진 최적화',en:'SEO',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'검색엔진이 정한 노출 규칙과 알고리즘 질서에 맞춰 웹페이지의 구조를 변경하는 디지털 마케팅 제약 기법.',src:'IT용어사전'},
+  {no:219,ko:'가상 바운더리',en:'Geofencing',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'위치기반 서비스에서 특정 지리적 영역에 가상의 울타리를 설정하고, 출입 시 특정 규칙이 작동하게 만드는 통제 기술.',src:'정보통신용어사전'},
+  {no:220,ko:'레이트 리밋',en:'Rate Limiting',cat:'22. 디지털 생태계 및 알고리즘 통제',def:'서버의 붕괴나 악용을 막기 위해, 특정 시간 동안 사용자가 보낼 수 있는 요청의 횟수를 강제로 제한하는 규칙.',src:'컴퓨터학사전'},
+  {no:221,ko:'데스틸',en:'De Stijl',cat:'23. 미학적 규범 및 사조의 해체',def:'수평과 수직, 그리고 삼원색과 무채색만을 사용한다는 극단적인 기하학적 규칙을 바탕으로 순수한 질서를 추구한 예술 운동.',src:'미술사전'},
+  {no:222,ko:'다다이즘',en:'Dadaism',cat:'23. 미학적 규범 및 사조의 해체',def:'전통적인 예술적 규칙, 미학적 질서, 이성주의를 전면 부정하고 무의식과 파괴, 우연성을 강조한 반(反)예술 사조.',src:'서양미술사'},
+  {no:223,ko:'아카데미즘',en:'Academism',cat:'23. 미학적 규범 및 사조의 해체',def:'공인된 교육 기관이 정한 전통적 관례, 기법, 미학적 규칙을 엄격히 고수하며 파격적인 변화를 제약하는 보수적 경향.',src:'예술학사전'},
+  {no:224,ko:'해체주의',en:'Deconstruction',cat:'23. 미학적 규범 및 사조의 해체',def:'기존의 이분법적 질서, 구조적 규범, 중심적 가치를 의도적으로 파괴하고 틈새를 찾아내어 다원적 의미를 부여하는 방법론.',src:'철학사전 / 건축학사전'},
+  {no:225,ko:'장식 예술',en:'Art Deco',cat:'23. 미학적 규범 및 사조의 해체',def:'과거의 복잡한 장식 규칙에서 벗어나, 현대 산업 사회에 맞춰 깔끔하고 반복적인 기하학적 문양의 질서를 추구한 양식.',src:'미술사전'},
+  {no:226,ko:'바로크',en:'Baroque',cat:'23. 미학적 규범 및 사조의 해체',def:'르네상스의 정형화되고 균형 잡힌 규칙을 깨뜨리고, 역동적인 움직임과 과장된 극적 질서를 표현한 17세기 예술 경향.',src:'서양미술사'},
+  {no:227,ko:'매너리즘',en:'Mannerism',cat:'23. 미학적 규범 및 사조의 해체',def:'독창적인 규칙 개발 없이 과거 거장들의 완성된 표현 기법을 기계적으로 모방하여 타성에 젖은 상태.',src:'표준국어대사전'},
+  {no:228,ko:'포스트모더니즘',en:'Postmodernism',cat:'23. 미학적 규범 및 사조의 해체',def:'모더니즘의 이성 중심주의, 획일적인 규칙, 거대 담론의 질서를 거부하고 다양성과 자율성, 대중성을 중시한 문화 흐름.',src:'현대철학사전'},
+  {no:229,ko:'개념 미술',en:'Conceptual Art',cat:'23. 미학적 규범 및 사조의 해체',def:'물질적인 형태나 미학적 가공 규칙보다, 작품 뒤에 숨겨진 \'아이디어\'나 \'개념적 의도\' 자체를 예술의 본질로 삼는 경향.',src:'미술사전'},
+  {no:230,ko:'고전주의',en:'Classicism',cat:'23. 미학적 규범 및 사조의 해체',def:'고대 그리스·로마의 예술을 모범으로 삼아 조화, 균형, 절제, 명석함이라는 엄격한 형식적 규칙을 숭상한 미학 사조.',src:'서양미술사'},
+];
+
+const dictDataEN = {
+  1:{cat:'Public Institutions and Legal Norms',def:'A law enacted through a resolution of the National Assembly and promulgated by the President. It is a social norm accompanied by the coercive power of the state.',src:'Standard Korean Language Dictionary'},
+  2:{cat:'Public Institutions and Legal Norms',def:'The supreme fundamental law of a state that prescribes the nation\'s governing system and the fundamental rights of its citizens.',src:'Standard Korean Language Dictionary'},
+  3:{cat:'Public Institutions and Legal Norms',def:'A law enacted by a local government through a resolution of its local council within the scope of higher statutes and regulations.',src:'Standard Korean Language Dictionary'},
+  4:{cat:'Public Institutions and Legal Norms',def:'An order issued by the President to prescribe specific details necessary for the enforcement of an act or law.',src:'Legal Terms Dictionary'},
+  5:{cat:'Public Institutions and Legal Norms',def:'A legal or moral constraint imposed by a norm.',src:'Standard Korean Language Dictionary'},
+  6:{cat:'Public Institutions and Legal Norms',def:'A power approved by law to acquire or enjoy a certain benefit.',src:'Standard Korean Language Dictionary'},
+  7:{cat:'Public Institutions and Legal Norms',def:'The act of preventing a certain conduct by statutes or orders.',src:'Standard Korean Language Dictionary'},
+  8:{cat:'Public Institutions and Legal Norms',def:'An administrative disposition that lifts a general and relative prohibition imposed by statutes in a specific case, thereby allowing the act to be performed lawfully.',src:'Dictionary of Public Administration'},
+  9:{cat:'Public Institutions and Legal Norms',def:'The act of releasing someone from an obligation such as an act, omission, or performance.',src:'Standard Korean Language Dictionary'},
+  10:{cat:'Public Institutions and Legal Norms',def:'The act of imposing a punishment or disadvantage when a law or regulation is violated, in order to secure its effectiveness.',src:'Dictionary of Sociology'},
+  11:{cat:'Public Institutions and Legal Norms',def:'The state of being in accordance with statutes or norms.',src:'Standard Korean Language Dictionary'},
+  12:{cat:'Public Institutions and Legal Norms',def:'The state of being contrary to or violating the law.',src:'Standard Korean Language Dictionary'},
+  13:{cat:'Public Institutions and Legal Norms',def:'The act of breaking a law or an order.',src:'Standard Korean Language Dictionary'},
+  14:{cat:'Public Institutions and Legal Norms',def:'The act of observing or following regulations, rules, or laws.',src:'Standard Korean Language Dictionary'},
+  15:{cat:'Public Institutions and Legal Norms',def:'The act of actually executing a contract, promise, or agreement.',src:'Standard Korean Language Dictionary'},
+  16:{cat:'Public Institutions and Legal Norms',def:'The efficacy or binding force of an action under laws or regulations.',src:'Legal Terms Dictionary'},
+  17:{cat:'Public Institutions and Legal Norms',def:'The termination or loss of efficacy of legal rights or obligations.',src:'Standard Korean Language Dictionary'},
+  18:{cat:'Public Institutions and Legal Norms',def:'A law that is recorded in writing and enacted through a prescribed legislative procedure.',src:'Standard Korean Language Dictionary'},
+  19:{cat:'Public Institutions and Legal Norms',def:'A juristic act constituted by the concurrence of expressions of intent made by multiple parties in opposite directions.',src:'Civil Law Dictionary'},
+  20:{cat:'Public Institutions and Legal Norms',def:'An official standard presented by a government or an organization to serve as an instruction for actions or policies.',src:'Dictionary of Current Affairs and Common Knowledge'},
+  21:{cat:'Social Customs and Autonomous Norms',def:'A law or rule that is not expressed in a documentary format but is tacitly recognized and passed down among members of society.',src:'Standard Korean Language Dictionary'},
+  22:{cat:'Social Customs and Autonomous Norms',def:'A harmful practice or bad custom inherited from the past that ought to be discarded.',src:'Standard Korean Language Dictionary'},
+  23:{cat:'Social Customs and Autonomous Norms',def:'Beautiful, virtuous customs and refined, civilized manners.',src:'Standard Korean Language Dictionary'},
+  24:{cat:'Social Customs and Autonomous Norms',def:'Proper manners and behavioral patterns that must be observed in daily life.',src:'Standard Korean Language Dictionary'},
+  25:{cat:'Social Customs and Autonomous Norms',def:'The morality and order that members of society must observe in public spaces.',src:'Standard Korean Language Dictionary'},
+  26:{cat:'Social Customs and Autonomous Norms',def:'General knowledge and judgment that people ordinarily know or ought to know.',src:'Standard Korean Language Dictionary'},
+  27:{cat:'Social Customs and Autonomous Norms',def:'A set degree or boundary that must not be exceeded.',src:'Standard Korean Language Dictionary'},
+  28:{cat:'Social Customs and Autonomous Norms',def:'An act of agreeing implicitly through behavior or attitude, without expressing it directly in words or writing.',src:'Dictionary of Sociology'},
+  29:{cat:'Social Customs and Autonomous Norms',def:'The proper path or the reason of things that a human being ought to fulfill.',src:'Standard Korean Language Dictionary'},
+  30:{cat:'Social Customs and Autonomous Norms',def:'A superficial logic or a legitimate reason put forward when planning or conducting an affair.',src:'Standard Korean Language Dictionary'},
+  31:{cat:'Social Customs and Autonomous Norms',def:'A legal principle stating that parties must act with sincerity so as not to betray the trust of the counterparty.',src:'Civil Law Dictionary'},
+  32:{cat:'Social Customs and Autonomous Norms',def:'The act of firmly believing in and relying on someone or something.',src:'Standard Korean Language Dictionary'},
+  33:{cat:'Social Customs and Autonomous Norms',def:'The act of determining in advance with another person how to handle a future matter, or the content so determined.',src:'Standard Korean Language Dictionary'},
+  34:{cat:'Social Customs and Autonomous Norms',def:'The state of being equitable, just, and right.',src:'Standard Korean Language Dictionary'},
+  35:{cat:'Social Customs and Autonomous Norms',def:'The equitable and right moral principle that constitutes and sustains a society.',src:'Dictionary of Philosophy'},
+  36:{cat:'Social Customs and Autonomous Norms',def:'The interest of society as a whole or the public welfare.',src:'Standard Korean Language Dictionary'},
+  37:{cat:'Social Customs and Autonomous Norms',def:'The act of giving and receiving help from one another.',src:'Standard Korean Language Dictionary'},
+  38:{cat:'Social Customs and Autonomous Norms',def:'The act of being connected as a single unit or uniting together for a common goal.',src:'Dictionary of Sociology'},
+  39:{cat:'Social Customs and Autonomous Norms',def:'An assigned mission and moral responsibility.',src:'Standard Korean Language Dictionary'},
+  40:{cat:'Social Customs and Autonomous Norms',def:'An awareness of the rights and duties required as a member of a democratic society.',src:'Dictionary of Sociology'},
+  41:{cat:'Organizational Discipline and Management Systems',def:'Rules established internally within a company to maintain order and process business operations.',src:'Standard Korean Language Dictionary'},
+  42:{cat:'Organizational Discipline and Management Systems',def:'Rules established to achieve the educational objectives of a school.',src:'Standard Korean Language Dictionary'},
+  43:{cat:'Organizational Discipline and Management Systems',def:'Rules determined to apply exclusively within a certain group or institution.',src:'Standard Korean Language Dictionary'},
+  44:{cat:'Organizational Discipline and Management Systems',def:'A stratified order divided according to status, rank, or duties within an organization or group.',src:'Dictionary of Public Administration'},
+  45:{cat:'Organizational Discipline and Management Systems',def:'An organizational framework that prescribes the types of duties, division of work, limits of responsibility, and so forth.',src:'Standard Korean Language Dictionary'},
+  46:{cat:'Organizational Discipline and Management Systems',def:'An ordered sequence or position arranged according to a certain standard.',src:'Standard Korean Language Dictionary'},
+  47:{cat:'Organizational Discipline and Management Systems',def:'A system where status, rank, or wages within an organization rise as continuous service years or age increase.',src:'Dictionary of Business Administration'},
+  48:{cat:'Organizational Discipline and Management Systems',def:'The act of vowing and promising, or the content of such a vow.',src:'Standard Korean Language Dictionary'},
+  49:{cat:'Organizational Discipline and Management Systems',def:'The act of exposing wrongdoing or guilt and severely rebuking it.',src:'Standard Korean Language Dictionary'},
+  50:{cat:'Organizational Discipline and Management Systems',def:'The act of imposing sanctions for wrongdoing or improper conduct.',src:'Standard Korean Language Dictionary'},
+  51:{cat:'Organizational Discipline and Management Systems',def:'The act of forcibly stripping a person of their position and expelling them due to misconduct.',src:'Standard Korean Language Dictionary'},
+  52:{cat:'Organizational Discipline and Management Systems',def:'A disciplinary disposition that halts the performance of duties for a certain period of time.',src:'Standard Korean Language Dictionary'},
+  53:{cat:'Organizational Discipline and Management Systems',def:'A type of disciplinary action that reduces and pays less wages for a certain period of time.',src:'Standard Korean Language Dictionary'},
+  54:{cat:'Organizational Discipline and Management Systems',def:'A light disciplinary disposition that demands correction and admonishes someone for an error in duty or a violation of discipline.',src:'Standard Korean Language Dictionary'},
+  55:{cat:'Organizational Discipline and Management Systems',def:'The act of stripping a member of their qualifications and expelling them from a group or organization.',src:'Standard Korean Language Dictionary'},
+  56:{cat:'Organizational Discipline and Management Systems',def:'The conditions or abilities necessary to hold a certain status or position, or to perform a specific task.',src:'Standard Korean Language Dictionary'},
+  57:{cat:'Organizational Discipline and Management Systems',def:'The power to exercise or govern that is lawfully granted according to a system or an official position.',src:'Dictionary of Public Administration'},
+  58:{cat:'Organizational Discipline and Management Systems',def:'The act of investigating and verifying whether regulations or budgets have been properly executed.',src:'Dictionary of Accounting'},
+  59:{cat:'Organizational Discipline and Management Systems',def:'An order issued by an administrative agency to rectify unlawful or unjust conduct.',src:'Legal Terms Dictionary'},
+  60:{cat:'Organizational Discipline and Management Systems',def:'A system that objectively evaluates the abilities and achievements of organization members.',src:'Dictionary of Business Administration'},
+  61:{cat:'Science, Technology, and Data Systems',def:'An inevitable relationship of cause and effect that consistently manifests in natural or social phenomena.',src:'Dictionary of Science'},
+  62:{cat:'Science, Technology, and Data Systems',def:'An expression in mathematics or science that represents a certain relationship or law using letters and symbols.',src:'Dictionary of Mathematics'},
+  63:{cat:'Science, Technology, and Data Systems',def:'A proposition whose truth has been established through proof. It serves as the basis for proving other propositions.',src:'Dictionary of Mathematics'},
+  64:{cat:'Science, Technology, and Data Systems',def:'An assumption temporarily established to explain a certain phenomenon. It becomes established as a law after undergoing verification.',src:'Dictionary of Science'},
+  65:{cat:'Science, Technology, and Data Systems',def:'A theoretical framework or system that dominates the academia or society of an era.',src:'Thomas Kuhn, The Structure of Scientific Revolutions'},
+  66:{cat:'Science, Technology, and Data Systems',def:'A set of sequential procedures or formulas designed to solve a specific problem.',src:'Dictionary of Computer Science'},
+  67:{cat:'Science, Technology, and Data Systems',def:'A standardized system of instructions or symbols that a computer can understand.',src:'Dictionary of IT Terms'},
+  68:{cat:'Science, Technology, and Data Systems',def:'A number or factor that can change depending on certain conditions.',src:'Dictionary of Mathematics'},
+  69:{cat:'Science, Technology, and Data Systems',def:'A number or factor that has a fixed, unchanging value.',src:'Dictionary of Mathematics'},
+  70:{cat:'Science, Technology, and Data Systems',def:'An auxiliary variable used to determine the functional relationship between two or more variables.',src:'Dictionary of IT Terms'},
+  71:{cat:'Science, Technology, and Data Systems',def:'A system control method where output results are sent back to the input side to adjust the causal behavior.',src:'Dictionary of Systems Engineering'},
+  72:{cat:'Science, Technology, and Data Systems',def:'A cyclical structure in a system or program that repeats until a specific condition is satisfied.',src:'Dictionary of Computer Science'},
+  73:{cat:'Science, Technology, and Data Systems',def:'A device or program that extracts only specific data or signals and filters out the rest.',src:'Dictionary of IT Terms'},
+  74:{cat:'Science, Technology, and Data Systems',def:'The process of matching the states of two or more systems or datasets.',src:'Dictionary of Information and Communications Terms'},
+  75:{cat:'Science, Technology, and Data Systems',def:'A state in which the occurrence of events or the transmission of data happens independently without a regular temporal rule.',src:'Dictionary of Information and Communications Terms'},
+  76:{cat:'Science, Technology, and Data Systems',def:'The task of finding and correcting errors or malfunctions in a program.',src:'Dictionary of Computer Science'},
+  77:{cat:'Science, Technology, and Data Systems',def:'The process of translating a programming language written by humans into machine language that a computer can understand.',src:'Dictionary of IT Terms'},
+  78:{cat:'Science, Technology, and Data Systems',def:'A boundary surface that connects two systems, devices, or humans and machines so they can interact with each other.',src:'Telecommunications Technology Association (TTA) Glossary'},
+  79:{cat:'Science, Technology, and Data Systems',def:'Data that records the operating status or usage history of a system in chronological order.',src:'Dictionary of Computer Science'},
+  80:{cat:'Science, Technology, and Data Systems',def:'An integrated collection of data managed so that multiple users or programs can share and utilize it.',src:'Dictionary of IT Terms'},
+  81:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A state in which the development of things or the occurrence of events is not accidental, but bound to happen in a certain way according to the law of causality.',src:'Dictionary of Philosophy'},
+  82:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A phenomenon that occurs unpredictably because its causal relationship is unclear.',src:'Dictionary of Philosophy'},
+  83:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The law stating that every phenomenon must have a cause, and that without a cause, there can be no effect.',src:'Dictionary of Philosophy'},
+  84:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The human capacity to think conceptually, judge logically, and comprehend the reason of things.',src:'Dictionary of Philosophy'},
+  85:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The universal law and reason that governs the universe and human society.',src:'Dictionary of Greek Philosophy'},
+  86:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A concept contrasted with chaos; a cosmic system characterized by order and harmony.',src:'Dictionary of Greek Philosophy'},
+  87:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The state of primordial confusion before the formation of the universe, or a state devoid of order and definitive form.',src:'Dictionary of Greek Philosophy'},
+  88:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A physical quantity representing the degree of disorder within a system. Natural phenomena proceed in a direction that increases entropy.',src:'Dictionary of Thermodynamics'},
+  89:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The property of an organism or a system to maintain a constant internal state in response to changes in the external environment.',src:'Dictionary of Biology'},
+  90:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'An intellectual movement that seeks to understand the essence of things not through individual elements, but through the network of relationships (structure) among those elements.',src:'Dictionary of Philosophy'},
+  91:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'An ideology that rejects fixed binary orders or centralized values and critically dismantles traditional systems.',src:'Jacques Derrida'},
+  92:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The act of breaking established formalities or customs to create an exception.',src:'Standard Korean Language Dictionary'},
+  93:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The act of behaving in a way that departs from social norms or expectations.',src:'Dictionary of Sociology'},
+  94:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'The act of crossing over or violating laws or prohibited rules.',src:'Standard Korean Language Dictionary'},
+  95:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A doctrine, argument, or sect that deviates from and opposes orthodox doctrines or dominant ideological systems.',src:'Dictionary of Religious Studies'},
+  96:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A state in which two facts logically cannot hold true simultaneously and thus clash with each other.',src:'Dictionary of Logic'},
+  97:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'An expression or situation that appears contradictory on the surface but contains a profound underlying truth.',src:'Dictionary of Logic'},
+  98:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A difficult situation in which choosing either of two options yields an unsatisfactory result.',src:'Dictionary of Logic'},
+  99:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'A daunting impasse or a logical dead end that is difficult to resolve.',src:'Dictionary of Philosophy'},
+  100:{cat:'Philosophy, Aesthetics, Anomalies, and Exceptions',def:'An ideal society or space of order that does not exist anywhere in reality.',src:'Thomas More'},
+  101:{cat:'Economics, Markets, and Administrative Regulation',def:'The act of setting a certain limit or preventing something from exceeding it by rules or laws.',src:'Standard Korean Language Dictionary'},
+  102:{cat:'Economics, Markets, and Administrative Regulation',def:'An act where competing firms collude with one another to restrict prices or production volumes, thereby undermining the fair rules of the market.',src:'Dictionary of Economics'},
+  103:{cat:'Economics, Markets, and Administrative Regulation',def:'A state in which a single supplier dominates the market, artificially controlling prices and the flow of distribution.',src:'Dictionary of Economics'},
+  104:{cat:'Economics, Markets, and Administrative Regulation',def:'A system of taxes levied on goods passing through national borders in accordance with laws or treaties.',src:'Standard Korean Language Dictionary'},
+  105:{cat:'Economics, Markets, and Administrative Regulation',def:'A quantitative or proportional limit allowed by the government regarding imports, production, etc.',src:'Dictionary of Current Affairs and Common Knowledge'},
+  106:{cat:'Economics, Markets, and Administrative Regulation',def:'The ratio of interest charged on borrowed money or paid on deposits. A representative economic indicator adjusted by a central bank to control the flow of capital.',src:'Dictionary of Economics'},
+  107:{cat:'Economics, Markets, and Administrative Regulation',def:'An administrative disposition that lifts restrictions and grants qualifications in accordance with the law to allow specific acts or businesses.',src:'Standard Korean Language Dictionary'},
+  108:{cat:'Economics, Markets, and Administrative Regulation',def:'An exclusive and proprietary legal rule that guarantees the right to use a specific invention monopolistically.',src:'Legal Terms Dictionary'},
+  109:{cat:'Economics, Markets, and Administrative Regulation',def:'A monetary penalty imposed by an administrative agency to confiscate unjust enrichment obtained through violations of statutes and to sanction the violator.',src:'Dictionary of Public Administration'},
+  110:{cat:'Economics, Markets, and Administrative Regulation',def:'An institutional rule that compels corporations to transparently disclose their business conditions in order to protect shareholders and investors.',src:'Dictionary of Accounting'},
+  111:{cat:'Games, Sports, and Artistic Constraints',def:'A regulation that participants must observe to ensure a fair match in a game or sports match.',src:'Standard Korean Language Dictionary'},
+  112:{cat:'Games, Sports, and Artistic Constraints',def:'The act of violating game rules or established regulations.',src:'Standard Korean Language Dictionary'},
+  113:{cat:'Games, Sports, and Artistic Constraints',def:'The loss of the right to compete due to a severe violation of rules or a failure to meet eligibility requirements.',src:'Standard Korean Language Dictionary'},
+  114:{cat:'Games, Sports, and Artistic Constraints',def:'A punishment or disadvantage imposed on a person or a team that has violated the rules.',src:'Standard Korean Language Dictionary'},
+  115:{cat:'Games, Sports, and Artistic Constraints',def:'A specific style or category of artistic works formed by long-standing customs and formal rules.',src:'Dictionary of Literary Criticism'},
+  116:{cat:'Games, Sports, and Artistic Constraints',def:'A hackneyed, formulaic artistic expression or a fixed rule of narrative development.',src:'Dictionary of Literary Criticism'},
+  117:{cat:'Games, Sports, and Artistic Constraints',def:'A formal state in poetry or music where the pitch or length of sounds repeats according to a regular rule.',src:'Standard Korean Language Dictionary'},
+  118:{cat:'Games, Sports, and Artistic Constraints',def:'The study of the physical and artistic laws governing how chords are constructed and progressed in music.',src:'Dictionary of Music'},
+  119:{cat:'Games, Sports, and Artistic Constraints',def:'An artistic technique of order that represents three-dimensional objects on a two-dimensional plane using regular geometric principles.',src:'Dictionary of Art'},
+  120:{cat:'Games, Sports, and Artistic Constraints',def:'A poem whose number of lines, stanzas, or syllables is strictly bound by predetermined formal rules.',src:'Standard Korean Language Dictionary'},
+  121:{cat:'History, Religion, and Traditional Laws',def:'Autonomous or heteronomous rules of conduct that believers or practitioners must observe in a religious order to lead a moral life.',src:'Dictionary of Religious Studies'},
+  122:{cat:'History, Religion, and Traditional Laws',def:'An official theoretical system believed and followed as an unshakeable truth within a religion or a school of thought.',src:'Dictionary of Religious Studies'},
+  123:{cat:'History, Religion, and Traditional Laws',def:'A binding religious and legal rule established by divine revelation in religions such as Judaism or Islam.',src:'Dictionary of Religious Studies'},
+  124:{cat:'History, Religion, and Traditional Laws',def:'The intentional and regular suppression of physical desires to achieve a moral or religious purpose.',src:'Standard Korean Language Dictionary'},
+  125:{cat:'History, Religion, and Traditional Laws',def:'A set code of ceremonies and procedures for performing sacrificial rites or ancestral worship.',src:'Standard Korean Language Dictionary'},
+  126:{cat:'History, Religion, and Traditional Laws',def:'A system used in medieval Europe and other eras to judge heretics who violated religious rules and doctrines.',src:'Dictionary of History'},
+  127:{cat:'History, Religion, and Traditional Laws',def:'The supreme legal system enacted by the sovereignty of a state and applied to all individuals within its territory.',src:'Standard Korean Language Dictionary'},
+  128:{cat:'History, Religion, and Traditional Laws',def:'A diplomatic rule in the historical East Asian international order where tribute was regularly offered between a suzerain state and a vassal state to reaffirm their lord-vassal relationship.',src:'Dictionary of History'},
+  129:{cat:'History, Religion, and Traditional Laws',def:'An act of hostility committed by betraying the supreme rules and the duty of loyalty owed to a state or a monarch.',src:'Standard Korean Language Dictionary'},
+  130:{cat:'History, Religion, and Traditional Laws',def:'A regulatory concept from the Joseon Dynasty used to ostracize individuals who disrupted Confucian doctrines and social order.',src:'Encyclopedia of Korean Culture'},
+  131:{cat:'Daily Actions and Psychological Frames',def:'A customary sequence or method of tasks repeated regularly every day to produce a specific effect.',src:'Standard Korean Language Dictionary'},
+  132:{cat:'Daily Actions and Psychological Frames',def:'An individual behavioral pattern that has become ingrained through long-standing repetition.',src:'Standard Korean Language Dictionary'},
+  133:{cat:'Daily Actions and Psychological Frames',def:'A psychological state of excessive obsession with one\'s own specific rules or methods of control, causing severe anxiety if they are not performed.',src:'Dictionary of Psychology'},
+  134:{cat:'Daily Actions and Psychological Frames',def:'A cognitive distortion phenomenon where individuals selectively accept only information that conforms to their own beliefs or fixed rules.',src:'Dictionary of Psychology'},
+  135:{cat:'Daily Actions and Psychological Frames',def:'A baseline of the mind and a framework of thought that operates when perceiving or judging objects and situations.',src:'Dictionary of Psychology'},
+  136:{cat:'Daily Actions and Psychological Frames',def:'A social phenomenon where individuals align their opinions and behaviors with the pressure or implicit rules of a group.',src:'Dictionary of Social Psychology'},
+  137:{cat:'Daily Actions and Psychological Frames',def:'A regularly fixed, biased concept about a certain group or object that is difficult to alter.',src:'Standard Korean Language Dictionary'},
+  138:{cat:'Daily Actions and Psychological Frames',def:'A social event or repetitive behavioral pattern performed according to set rules and formalities.',src:'Dictionary of Sociology'},
+  139:{cat:'Daily Actions and Psychological Frames',def:'The act of imposing sanctions for set rules or faults in order to rectify them.',src:'Standard Korean Language Dictionary'},
+  140:{cat:'Daily Actions and Psychological Frames',def:'A compensation or benefit provided when rules are faithfully observed or when excellent outcomes are achieved.',src:'Standard Korean Language Dictionary'},
+  141:{cat:'Language, Logic, and Structural Rules',def:'A structural system of rules that must be observed to use a language correctly and comprehensibly.',src:'Dictionary of Linguistics'},
+  142:{cat:'Language, Logic, and Structural Rules',def:'A socially standardized system of writing rules to follow when recording a language in print or text.',src:'Standard Korean Language Dictionary'},
+  143:{cat:'Language, Logic, and Structural Rules',def:'The academic study of the arrangement laws and structural rules of words that constitute a sentence.',src:'Dictionary of Linguistics'},
+  144:{cat:'Language, Logic, and Structural Rules',def:'The academic field that deals with the laws for drawing sound thinking and error-free reasoning.',src:'Dictionary of Philosophy'},
+  145:{cat:'Language, Logic, and Structural Rules',def:'The property of a logical inference being formally and systematically correct in deriving a conclusion from premises.',src:'Dictionary of Logic'},
+  146:{cat:'Language, Logic, and Structural Rules',def:'A method of reasoning that derives universal laws and rules from multiple individual facts.',src:'Dictionary of Philosophy'},
+  147:{cat:'Language, Logic, and Structural Rules',def:'A method of reasoning that derives specific, individual conclusions from universal principles or rules that have already been proven.',src:'Dictionary of Philosophy'},
+  148:{cat:'Language, Logic, and Structural Rules',def:'A logical rule or an assumed fact that serves as the foundation for deriving a certain conclusion.',src:'Dictionary of Logic'},
+  149:{cat:'Language, Logic, and Structural Rules',def:'An incorrect inference committed by violating logical rules, which appears correct only on the surface.',src:'Dictionary of Logic'},
+  150:{cat:'Language, Logic, and Structural Rules',def:'A regular framework and arrangement layout through which text or sentences are structured.',src:'Standard Korean Language Dictionary'},
+  151:{cat:'Visual Order and Rules of Form',def:'An absolute layout rule that divides a page or screen horizontally and vertically to create grid guidelines, aligning elements accordingly.',src:'Dictionary of Design Studies'},
+  152:{cat:'Visual Order and Rules of Form',def:'A design technique that regularly adjusts typeface, size, kerning, and leading to enhance text legibility and visual order.',src:'Dictionary of Visual Design'},
+  153:{cat:'Visual Order and Rules of Form',def:'A rule that arranges elements along reference lines (left, right, center, etc.) to provide visual stability and connectivity.',src:'Dictionary of Design Studies'},
+  154:{cat:'Visual Order and Rules of Form',def:'A law that utilizes distinct differences in size, color, or shape to create a visual hierarchy and control prominence.',src:'Dictionary of Plastic Arts'},
+  155:{cat:'Visual Order and Rules of Form',def:'A state where different design elements harmonize within a consistent rule or theme, making them look like a single, complete organism.',src:'Dictionary of Plastic Arts'},
+  156:{cat:'Visual Order and Rules of Form',def:'A technique that intentionally and regularly arranges empty spaces devoid of information to give key elements visual breathing room and increase focus.',src:'Dictionary of Art'},
+  157:{cat:'Visual Order and Rules of Form',def:'The relative size relationship between elements; a mathematical order (such as the Golden Ratio, 1:1.618) that humans visually perceive as most stable and beautiful.',src:'Dictionary of Design Studies'},
+  158:{cat:'Visual Order and Rules of Form',def:'A rule of form that arranges shapes or visual weights identically across a central axis to create perfect balance and standardized order.',src:'Dictionary of Plastic Arts'},
+  159:{cat:'Visual Order and Rules of Form',def:'A principle that repeats similar visual elements (shapes, colors, etc.) at regular intervals to give movement and vitality to a screen.',src:'Dictionary of Plastic Arts'},
+  160:{cat:'Visual Order and Rules of Form',def:'A cognitive psychological law of vision stating that humans do not view individual visual elements separately, but perceive them grouped into an organized form or regular structure.',src:'Dictionary of Cognitive Psychology'},
+  161:{cat:'User Experience (UX) and Interaction Norms',def:'An environmental design principle that provides formal clues (e.g., a button shaped to invite clicking) so that users act intuitively without hesitation.',src:'Cognitive Science'},
+  162:{cat:'User Experience (UX) and Interaction Norms',def:'A technique that adjusts sizes or colors based on importance to guide the user\'s gaze in the exact sequence intended by the designer.',src:'Dictionary of UX Design'},
+  163:{cat:'User Experience (UX) and Interaction Norms',def:'A norm that maintains UI elements or system operations under identical rules so that users adapt and navigate smoothly even on new screens.',src:'Dictionary of UX Design'},
+  164:{cat:'User Experience (UX) and Interaction Norms',def:'A physical interaction law stating that the time required to move to a target button or icon is shorter when the target is larger and closer.',src:'Dictionary of Ergonomics'},
+  165:{cat:'User Experience (UX) and Interaction Norms',def:'A design constraint rule stating that the time it takes for a person to make a decision increases logarithmically with the number and complexity of choices.',src:'Dictionary of Ergonomics'},
+  166:{cat:'User Experience (UX) and Interaction Norms',def:'A fixed behavioral expectation defined in a user\'s mind regarding how a system will operate, based on their past experiences.',src:'Dictionary of UX Design'},
+  167:{cat:'User Experience (UX) and Interaction Norms',def:'A quantitative, standard metric indicating how easily, quickly, and error-free a tool or system can achieve user goals.',src:'ISO 9241'},
+  168:{cat:'User Experience (UX) and Interaction Norms',def:'A logical framework that systematically categorizes and designs complex data so that users can find desired information seamlessly.',src:'Dictionary of UX Design'},
+  169:{cat:'User Experience (UX) and Interaction Norms',def:'A design standard ensuring that all people, regardless of physical conditions such as disabilities or old age, can use service rules equally.',src:'Web Content Accessibility Guidelines'},
+  170:{cat:'User Experience (UX) and Interaction Norms',def:'An unethical user interface design trick that deceives users into acting according to hidden corporate rules (e.g., deceptive automatic recurring payments).',src:'Dictionary of Current Affairs and Common Knowledge'},
+  171:{cat:'Brand Systems and Design Guidelines',def:'A strict visual rule document prescribing the use of logos, colors, typography, etc., to ensure the brand identity is not compromised.',src:'Dictionary of Brand Marketing'},
+  172:{cat:'Brand Systems and Design Guidelines',def:'A unified system that standardizes components and design rules into guidelines and code, enabling an entire organization to build consistent products.',src:'Dictionary of IT Terms'},
+  173:{cat:'Brand Systems and Design Guidelines',def:'The highest visual symbolic rule system that integrates a company\'s philosophy and formal order to display it externally.',src:'Dictionary of Design Studies'},
+  174:{cat:'Brand Systems and Design Guidelines',def:'A brand control system that standardizes visual elements to match the characteristics of a specific product or service, distinguishing it through logos, packaging, etc.',src:'Dictionary of Design Studies'},
+  175:{cat:'Brand Systems and Design Guidelines',def:'A guidebook that formalizes specific web/app screen style rules, such as font sizes, margins, and color codes (RGB, HEX, etc.).',src:'Dictionary of Design Studies'},
+  176:{cat:'Brand Systems and Design Guidelines',def:'The minimum modular UI element (buttons, inputs, etc.) within a design system that possesses independent rules and forms for reusability.',src:'Dictionary of IT Terms'},
+  177:{cat:'Brand Systems and Design Guidelines',def:'Standardized visual files, such as images and icons, produced according to design guidelines to be immediately deployed into a project.',src:'Dictionary of IT Terms'},
+  178:{cat:'Brand Systems and Design Guidelines',def:'A tool used before the full scale of design work begins to collect images or color chips, adjusting the overall visual direction and emotional rules.',src:'Dictionary of Design Studies'},
+  179:{cat:'Brand Systems and Design Guidelines',def:'An artistic movement that pursues order in simplicity, restricting ornaments that obscure the essence under the rule of "Less is more."',src:'Dictionary of Art'},
+  180:{cat:'Brand Systems and Design Guidelines',def:'A technique in digital UI design that mimics the analog order and textures of the real world to evoke a sense of familiarity for users.',src:'Dictionary of UX Design'},
+  181:{cat:'Industrial/Environmental Design and Production Constraints',def:'A universal and inclusive design rule stating that products and environments must be designed from the outset for everyone, regardless of nationality, gender, age, or disability.',src:'Principles of Universal Design'},
+  182:{cat:'Industrial/Environmental Design and Production Constraints',def:'A science of order that scientifically analyzes human physical characteristics and limitations to design furniture or products that prevent physical strain.',src:'Dictionary of Ergonomics'},
+  183:{cat:'Industrial/Environmental Design and Production Constraints',def:'A full-scale physical model manufactured before mass production to verify dimensions, design rules, external appearance, and grip texture.',src:'Dictionary of Production Management'},
+  184:{cat:'Industrial/Environmental Design and Production Constraints',def:'The process of quickly making a prototype to validate whether user requirements or interaction rules function properly.',src:'Dictionary of UX Design'},
+  185:{cat:'Industrial/Environmental Design and Production Constraints',def:'A virtual manufacturing process that computes physical laws such as light, shade, and texture onto 2D drawings or 3D wireframes to complete realistic images.',src:'Dictionary of Computer Graphics'},
+  186:{cat:'Industrial/Environmental Design and Production Constraints',def:'A standard rule system of color, materials, and surface finish that dictates the final emotional value of a product design.',src:'Dictionary of Product Design'},
+  187:{cat:'Industrial/Environmental Design and Production Constraints',def:'A state in digital design where the size and position of elements do not break into fractions but align precisely with the grid rules of pixels (px).',src:'Dictionary of IT Terms'},
+  188:{cat:'Industrial/Environmental Design and Production Constraints',def:'A design order system that constructs information environments so humans can navigate complex spaces (airports, subways, etc.) intuitively without getting lost.',src:'Dictionary of Spatial Design'},
+  189:{cat:'Industrial/Environmental Design and Production Constraints',def:'A rule methodology that deeply researches the constraints of marginalized groups to derive innovative solutions that ultimately satisfy the mainstream public.',src:'Dictionary of Design Studies'},
+  190:{cat:'Industrial/Environmental Design and Production Constraints',def:'A design rule that incorporates environmental regulations from the planning stage to the disposal of a product to minimize its adverse impacts on the environment.',src:'Dictionary of Environmental Engineering'},
+  191:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A surrealist artistic methodology that completely excludes rational control and aesthetic rules, drawing as the hand moves according to the flow of the subconscious.',src:'Dictionary of Art'},
+  192:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A movement that integrated art and technology under the grand principle of "Form follows function," establishing the geometric order and standards of modern design.',src:'Dictionary of Design'},
+  193:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A form of conceptual art that presents manufactured goods directly as artwork, thereby dismantling the conventional rules of creation and established notions of art.',src:'Marcel Duchamp'},
+  194:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A design movement that rebelled against strict modernist rules, functionalism, and commercial order, pursuing unconventional forms and playfulness.',src:'Dictionary of Design'},
+  195:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A vulgar, lowbrow imitation of art that copies the elegant rules of orthodox art, or a style that humorously utilizes and elevates such qualities.',src:'Dictionary of Aesthetics'},
+  196:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A design thinking methodology model that discovers problems and derives solutions through standardized rules via alternating processes of divergence and convergence.',src:'British Design Council'},
+  197:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A methodology that avoids being bound to rigid, perfect plans, instead rapidly generating and testing prototypes in short cycles to flexibly modify rules.',src:'Software Engineering'},
+  198:{cat:'Artistic Constraints and Modern Design Methodologies',def:'An external professional design organization framework that diagnoses corporate brand rules and visual assets to provide strategic solutions.',src:'Dictionary of Business Administration'},
+  199:{cat:'Artistic Constraints and Modern Design Methodologies',def:'The general manager responsible for finalized review and control over the overall visual concept, direction, and quality standards of a design project.',src:'Dictionary of Design Studies'},
+  200:{cat:'Artistic Constraints and Modern Design Methodologies',def:'A constraining factor left inside a system during transitions to new systems, built under past rules or standards, which continues to hinder progress.',src:'Dictionary of IT Terms'},
+  201:{cat:'Architecture and Spatial Limitations and Order',def:'A golden ratio system based on human physical proportions proposed by the architect Le Corbusier. A standard scale that establishes spatial order.',src:'Dictionary of Architecture'},
+  202:{cat:'Architecture and Spatial Limitations and Order',def:'A legal rule that limits the ratio of building area to lot area to prevent overcrowding in urban spaces and secure minimum open space.',src:'Dictionary of Real Estate Terms'},
+  203:{cat:'Architecture and Spatial Limitations and Order',def:'A regulatory standard that limits the ratio of a building\'s total floor area to its lot area to maintain urban population density and public service order.',src:'Dictionary of Urban Planning'},
+  204:{cat:'Architecture and Spatial Limitations and Order',def:'A rule-based pathway system designed to predict the trajectories of people or objects within a space, preventing confusion and enhancing efficiency.',src:'Dictionary of Interior Architecture'},
+  205:{cat:'Architecture and Spatial Limitations and Order',def:'A phenomenon where deteriorated urban centers revitalize, causing rent hikes that displace original residents and reorganize the commercial order.',src:'Dictionary of Sociology'},
+  206:{cat:'Architecture and Spatial Limitations and Order',def:'An urban regulation rule that minutely restricts building heights, uses, and forms to systematically manage and beautify specific urban sectors.',src:'Ministry of Land, Infrastructure and Transport'},
+  207:{cat:'Architecture and Spatial Limitations and Order',def:'The smallest grid unit of urban space surrounded by roads. It serves as the basic framework for formal control and order in urban planning.',src:'Dictionary of Urban Planning'},
+  208:{cat:'Architecture and Spatial Limitations and Order',def:'A legal rule restricting the maximum height of buildings to secure sunlight rights, protect cultural properties, or maintain the order of the urban skyline.',src:'Dictionary of Building Acts'},
+  209:{cat:'Architecture and Spatial Limitations and Order',def:'The design of a building\'s front exterior wall. It forms the urban streetscape and serves as the face that must satisfy public visual order and rules.',src:'Dictionary of Architecture'},
+  210:{cat:'Architecture and Spatial Limitations and Order',def:'A green space rule installed between residential areas and locations with risks of disasters, pollution, or noise to prevent mutual encroachment.',src:'Dictionary of Land Use Terms'},
+  211:{cat:'Digital Ecosystems and Algorithmic Control',def:'A set of clear, sequential computational rules that a computer must follow to solve problems or derive specific outcomes.',src:'Dictionary of Computer Science'},
+  212:{cat:'Digital Ecosystems and Algorithmic Control',def:'A feedback control mechanism where a system\'s output influences its input, allowing it to modify its own rules or strengthen/weaken its order.',src:'System Dynamics'},
+  213:{cat:'Digital Ecosystems and Algorithmic Control',def:'Behavioral constraints that creators or developers must observe to maintain ecosystem order within a platform (e.g., YouTube, App Store).',src:'Dictionary of Current Affairs and Common Knowledge'},
+  214:{cat:'Digital Ecosystems and Algorithmic Control',def:'A phenomenon where systemic rule designs for learning data produce discriminatory or unfair ordered outcomes against specific groups.',src:'Dictionary of Artificial Intelligence'},
+  215:{cat:'Digital Ecosystems and Algorithmic Control',def:'A standardized interface rule system established so that different software programs can exchange data.',src:'Dictionary of IT Terms'},
+  216:{cat:'Digital Ecosystems and Algorithmic Control',def:'A platform control method that artificially restricts the exposure of a user\'s posts without their knowledge, quietly isolating violators of ecosystem safety rules.',src:'Dictionary of Current Affairs and Common Knowledge'},
+  217:{cat:'Digital Ecosystems and Algorithmic Control',def:'The connectivity capability of disparate systems to exchange information and operate without errors under identical rules and standards.',src:'Telecommunications Technology Association (TTA) Glossary'},
+  218:{cat:'Digital Ecosystems and Algorithmic Control',def:'A digital marketing constraint technique that alters the structure of a webpage to match the exposure rules and algorithmic order set by search engines.',src:'Dictionary of IT Terms'},
+  219:{cat:'Digital Ecosystems and Algorithmic Control',def:'A control technology in location-based services that sets a virtual perimeter around specific geographical areas, triggering preset rules upon entry or exit.',src:'Dictionary of Information and Communications Terms'},
+  220:{cat:'Digital Ecosystems and Algorithmic Control',def:'A rule that forcibly limits the number of requests a user can send within a specific timeframe to prevent server crashes or malicious abuse.',src:'Dictionary of Computer Science'},
+  221:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'An art movement that pursued pure order based on the extreme geometric rule of utilizing only horizontal and vertical lines, alongside primary colors and non-colors.',src:'Dictionary of Art'},
+  222:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'An anti-art movement that entirely rejected traditional artistic rules, aesthetic orders, and rationalism, emphasizing the subconscious, destruction, and randomness.',src:'History of Western Art'},
+  223:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A conservative tendency that strictly adheres to the traditional customs, techniques, and aesthetic rules set by accredited educational institutions, restricting disruptive changes.',src:'Dictionary of Art Studies'},
+  224:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A methodology that intentionally disrupts existing binary orders, structural norms, and centralized values, identifying gaps to endow pluralistic meanings.',src:'Dictionary of Philosophy / Dictionary of Architecture'},
+  225:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A style that departed from complex past decorative rules to pursue a clean, repetitive order of geometric patterns tailored to modern industrial society.',src:'Dictionary of Art'},
+  226:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A 17th-century artistic trend that broke the standardized and balanced rules of the Renaissance to express dynamic movement and exaggerated dramatic order.',src:'History of Western Art'},
+  227:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A state of falling into inertia by mechanically copying the perfected rendering techniques of past masters without developing original rules.',src:'Standard Korean Language Dictionary'},
+  228:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A cultural movement that rejected the rationalism, uniform rules, and grand narratives of modernism, emphasizing diversity, autonomy, and popular appeal.',src:'Dictionary of Contemporary Philosophy'},
+  229:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'A trend that treats the idea or conceptual intent hidden behind a work as the true essence of art, rather than its material form or aesthetic processing rules.',src:'Dictionary of Art'},
+  230:{cat:'Aesthetic Norms and the Dismantling of Movements',def:'An aesthetic trend that revered the art of ancient Greece and Rome as a model, venerating the strict formal rules of harmony, balance, restraint, and clarity.',src:'History of Western Art'},
+};
+
+let dictLang = 'ko';
+
+const COL_KEYS   = ['no', 'ko', 'en', 'cat', 'def', 'src'];
+const COL_LABELS = ['N0.', 'KOREAN', 'ENGLISH', 'CATEGORY', 'DEFINITION', 'SOURCE'];
+let dictSort = { col: 'no', dir: 'asc' };
+let dictHeadersReady = false;
+
+function sortedDict() {
+  const { col, dir } = dictSort;
+  return [...dictData].sort((a, b) => {
+    const va = a[col], vb = b[col];
+    const cmp = col === 'no'
+      ? va - vb
+      : String(va).localeCompare(String(vb), ['ko', 'en'], { sensitivity: 'base' });
+    return dir === 'asc' ? cmp : -cmp;
+  });
+}
+
+function renderDictEntries() {
+  const container = document.getElementById('dict-entries');
+  container.innerHTML = '';
+  sortedDict().forEach(entry => {
+    const row = document.createElement('div');
+    row.className = 'dict-entry';
+    const en = dictLang === 'en' && dictDataEN[entry.no];
+    const cat = en ? en.cat : entry.cat;
+    const def = en ? en.def : entry.def;
+    const src = en ? en.src : entry.src;
+    const catClass = en ? 'dict-entry-cat dict-entry-cat--en' : 'dict-entry-cat';
+    const defClass = en ? 'dict-entry-def dict-entry-def--en' : 'dict-entry-def';
+    row.innerHTML =
+      '<span class="dict-entry-no">'  + String(entry.no).padStart(3, '0') + '</span>' +
+      '<span class="dict-entry-ko">'  + entry.ko  + '</span>' +
+      '<span class="dict-entry-en">'  + entry.en  + '</span>' +
+      '<span class="' + catClass + '">' + cat + '</span>' +
+      '<span class="' + defClass + '">' + def + '</span>' +
+      '<span class="dict-entry-src">' + src + '</span>';
+    container.appendChild(row);
+  });
+}
+
+function updateSortIndicators() {
+  document.querySelectorAll('.dict-col-header > span').forEach((span, i) => {
+    const col = COL_KEYS[i];
+    const active = dictSort.col === col;
+    span.classList.toggle('sort-active', active);
+    span.textContent = COL_LABELS[i] + (active ? (dictSort.dir === 'asc' ? ' ↑' : ' ↓') : '');
+  });
+}
+
+const dictOverlay = document.getElementById('dict-overlay');
+const dictBtn = document.getElementById('dict-btn');
+const dictCloseBtn = document.getElementById('dict-close');
+const dictSearchInput = document.getElementById('dict-search');
+
+function getOffsetInOverlay(el) {
+  let offset = 0;
+  while (el && el !== dictOverlay) {
+    offset += el.offsetTop;
+    el = el.offsetParent;
+  }
+  return offset;
+}
+
+function applySearchHighlight(doScroll) {
+  document.querySelectorAll('.dict-entry--highlight').forEach(el => el.classList.remove('dict-entry--highlight'));
+  const q = dictSearchInput.value.trim().toLowerCase();
+  if (!q) return;
+  const entries = document.querySelectorAll('.dict-entry');
+  for (const entry of entries) {
+    if (entry.textContent.toLowerCase().includes(q)) {
+      entry.classList.add('dict-entry--highlight');
+      if (doScroll) {
+        const top = getOffsetInOverlay(entry);
+        const scrollTarget = top - dictOverlay.clientHeight / 2 + entry.offsetHeight / 2;
+        dictOverlay.scrollTo({ top: Math.max(0, scrollTarget), behavior: 'smooth' });
+      }
+      break;
+    }
+  }
+}
+
+dictSearchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') applySearchHighlight(true);
+});
+
+const dictLangToggle = document.getElementById('dict-lang-toggle');
+dictLangToggle.addEventListener('click', () => {
+  dictLang = dictLang === 'ko' ? 'en' : 'ko';
+  dictLangToggle.textContent = dictLang === 'ko' ? 'EN' : 'KR';
+  dictLangToggle.classList.toggle('active', dictLang === 'en');
+  renderDictEntries();
+  applySearchHighlight(false);
+});
+
+function buildDictOverlay() {
+  if (!dictHeadersReady) {
+    dictHeadersReady = true;
+    document.querySelectorAll('.dict-col-header > span').forEach((span, i) => {
+      span.addEventListener('click', () => {
+        const col = COL_KEYS[i];
+        if (dictSort.col === col) {
+          dictSort.dir = dictSort.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          dictSort.col = col;
+          dictSort.dir = 'asc';
+        }
+        updateSortIndicators();
+        renderDictEntries();
+        applySearchHighlight(false);
+      });
+    });
+    updateSortIndicators();
+  }
+  renderDictEntries();
+}
+
+function openDict() {
+  buildDictOverlay();
+  dictOverlay.scrollTop = 0;
+  dictSearchInput.value = '';
+  document.querySelectorAll('.dict-entry--highlight').forEach(el => el.classList.remove('dict-entry--highlight'));
+  dictOverlay.classList.add('open');
+}
+
+function closeDict() {
+  dictOverlay.classList.remove('open');
+}
+
+dictBtn.addEventListener('click', openDict);
+dictCloseBtn.addEventListener('click', closeDict);
+
+const aboutOverlay = document.getElementById('about-overlay');
+const aboutBtn = document.getElementById('about-btn');
+const aboutCloseBtn = document.getElementById('about-close');
+const aboutBody = document.getElementById('about-body');
+const aboutLangToggle = document.getElementById('about-lang-toggle');
+let aboutLang = 'ko';
+
+function openAbout() {
+  aboutBody.scrollTop = 0;
+  aboutOverlay.classList.add('open');
+}
+
+function closeAbout() {
+  aboutOverlay.classList.remove('open');
+}
+
+aboutBtn.addEventListener('click', openAbout);
+aboutCloseBtn.addEventListener('click', closeAbout);
+
+aboutLangToggle.addEventListener('click', () => {
+  aboutLang = aboutLang === 'ko' ? 'en' : 'ko';
+  document.getElementById('about-ko').style.display = aboutLang === 'ko' ? 'block' : 'none';
+  document.getElementById('about-en').style.display = aboutLang === 'en' ? 'block' : 'none';
+  aboutLangToggle.textContent = aboutLang === 'ko' ? 'EN' : 'KR';
+  aboutLangToggle.classList.toggle('active', aboutLang === 'en');
+  aboutBody.scrollTop = 0;
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { closeDict(); closeAbout(); closeGallery(); }
+});
+
+// ═══════════════════════════════════════════════════════════
+//  GALLERY
+// ═══════════════════════════════════════════════════════════
+const galleryOverlay = document.getElementById('gallery-overlay');
+const galleryBtn = document.getElementById('gallery-btn');
+const galleryCloseBtn = document.getElementById('gallery-close');
+const galleryGrid = document.getElementById('gallery-grid');
+
+let galleryBuilt = false;
+
+function buildGallery() {
+  if (galleryBuilt) return;
+  galleryBuilt = true;
+  dataset.forEach(d => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'gallery-img-wrap';
+    const galSrc = galleryImage[d.id] || d.image;
+    if (galSrc) {
+      const img = document.createElement('img');
+      img.src = galSrc;
+      img.alt = d.title;
+      img.loading = 'lazy';
+      wrap.appendChild(img);
+    }
+
+    const cap = document.createElement('div');
+    cap.className = 'gallery-caption';
+
+    const numSpan = document.createElement('span');
+    numSpan.className = 'gallery-caption-num';
+    numSpan.textContent = String(d.id).padStart(3, '0') + ' —';
+
+    const koSpan = document.createElement('span');
+    koSpan.className = 'gallery-caption-ko';
+    koSpan.textContent = d.title;
+
+    const enSpan = document.createElement('span');
+    enSpan.className = 'gallery-caption-en';
+    enSpan.textContent = titleEN[d.id] || '';
+
+    const sideSpan = document.createElement('span');
+    sideSpan.className = 'gallery-caption-side';
+    sideSpan.textContent = d.side;
+
+    cap.appendChild(numSpan);
+    cap.appendChild(koSpan);
+    if (titleEN[d.id]) cap.appendChild(enSpan);
+    cap.appendChild(sideSpan);
+
+    item.appendChild(wrap);
+    item.appendChild(cap);
+
+    item.addEventListener('click', () => { closeGallery(); openModal(d); });
+
+    galleryGrid.appendChild(item);
+  });
+}
+
+function openGallery() {
+  buildGallery();
+  galleryOverlay.scrollTop = 0;
+  galleryOverlay.classList.add('open');
+}
+
+function closeGallery() {
+  galleryOverlay.classList.remove('open');
+}
+
+galleryBtn.addEventListener('click', openGallery);
+galleryCloseBtn.addEventListener('click', closeGallery);
+
+</script>
+</body>
+</html>
